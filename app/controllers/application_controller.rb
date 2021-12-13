@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :params_variable
   before_action :set_locale
 
 private
@@ -17,4 +18,9 @@ private
 def default_url_options
 { locale: I18n.locale }
 end
+
+def params_variable
+ 
+end
+
 end
