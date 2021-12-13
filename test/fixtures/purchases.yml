@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_ru: MyString
+  title_tm: MyString
+  text_ru: MyText
+  text_tm: MyText
+  year: MyString
+  price: MyString
+  phone: MyString
+  email: MyString
+  bought: false
+  cashless: false
+  type: one
+
+two:
+  title_ru: MyString
+  title_tm: MyString
+  text_ru: MyText
+  text_tm: MyText
+  year: MyString
+  price: MyString
+  phone: MyString
+  email: MyString
+  bought: false
+  cashless: false
+  type: two
