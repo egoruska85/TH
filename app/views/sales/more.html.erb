@@ -1,0 +1,15 @@
+<h1>
+<%= @sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @sale.title_ru if params[:locale] == 'ru' %>
+<%= @sale.title_tm if params[:locale] == 'tm' %>
+</h1>
+<% if @sale.image.attached? %>
+  <%= image_tag(@sale.image)%>
+<% else %>
+  <%= image_tag(@no) %>
+<% end %>
+<hr>
+<%= @sale.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @sale.text_ru if params[:locale] == 'ru' %>
+<%= @sale.text_tm if params[:locale] == 'tm' %>
+<%= @sale.year %>

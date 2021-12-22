@@ -1,0 +1,14 @@
+<%= @purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @purchase.title_ru if params[:locale] == 'ru' %>
+<%= @purchase.title_tm if params[:locale] == 'tm' %>
+<hr>
+<% if @purchase.image.attached? %>
+  <%= image_tag(@purchase.image)%>
+<% else %>
+  <%= image_tag(@no) %>
+<% end %>
+<%= @purchase.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @purchase.text_ru if params[:locale] == 'ru' %>
+<%= @purchase.text_tm if params[:locale] == 'tm' %>
+<hr>
+<%= @purchase.year %>

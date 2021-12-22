@@ -1,0 +1,26 @@
+<% if params[:id] == '1' %>
+  <% @purchasesauto.each do |purchase| %>
+  <% if purchase.image.attached? %>
+    <%= image_tag(purchase.image)%>
+  <% else %>
+    <%= image_tag(@no) %>
+  <% end %>
+    <%= purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %><%= link_to 'Подробнее', [:more, purchase] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= purchase.title_ru if params[:locale] == 'ru' %><%= link_to 'Подробнее', [:more, purchase] if params[:locale] == 'ru' %>
+    <%= purchase.title_tm if params[:locale] == 'tm' %><%= link_to 'has giňişleýin maglumat', [:more, purchase] if params[:locale] == 'tm' %>
+    <hr>
+  <% end %>
+<% end %>
+<% if params[:id] == '2' %>
+  <% @purchasesteh.each do |purchase| %>
+  <% if purchase.image.attached? %>
+    <%= image_tag(purchase.image)%>
+  <% else %>
+    <%= image_tag(@no) %>
+  <% end %>
+    <%= purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %><%= link_to 'Подробнее', [:more, purchase] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= purchase.title_ru if params[:locale] == 'ru' %><%= link_to 'Подробнее', [:more, purchase] if params[:locale] == 'ru' %>
+    <%= purchase.title_tm if params[:locale] == 'tm' %><%= link_to 'has giňişleýin maglumat', [:more, purchase] if params[:locale] == 'tm' %>
+    <hr>
+  <% end %>
+<% end %>

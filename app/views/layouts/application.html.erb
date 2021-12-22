@@ -88,8 +88,41 @@
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Главная</a></li>
                 <li><a href="#services-section" class="nav-link">Услуги</a></li>
-
-
+                <!--<li class="has-children">
+                  <a href="#about-section" class="nav-link">Аренда</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="#team-section" class="nav-link">Сроительная техника</a></li>
+                    <li><a href="#pricing-section" class="nav-link">Дорожная техника</a></li>
+                    <li><a href="#faq-section" class="nav-link">Резиновые хуи</a></li>
+                    <li class="has-children">
+                      <a href="#">More Links</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Menu One</a></li>
+                        <li><a href="#">Menu Two</a></li>
+                        <li><a href="#">Menu Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>-->
+                <li class="has-children">
+                  <a href="#about-section" class="nav-link">Коммиссионые услуги</a>
+                  <ul class="dropdown arrow-top">
+                    <% @types.each do |type| %>
+                      <li>
+                        <%= link_to sale_path(type) do %>
+                          <%= type.name %>
+                        <% end %>
+                      </li>
+                    <% end %>
+                    <% @types.each do |type| %>
+                      <li>
+                        <%= link_to purchase_path(type) do %>
+                          <%= type.name %>
+                        <% end %>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
                 <li class="has-children">
                   <a href="#about-section" class="nav-link">Аренда</a>
                   <ul class="dropdown arrow-top">
@@ -124,7 +157,7 @@
 
     </header>
 
-    
+
 
 
 
@@ -190,7 +223,7 @@
             <div class="border-top pt-5">
             <p class="copyright"><small>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> "TIJEGLI HYZMAT" All rights reserved
+            Copyright &copy;<%= @time.year %> "TIJEGLI HYZMAT" All rights reserved
             </small></p>
             </div>
           </div>

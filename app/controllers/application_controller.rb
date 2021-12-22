@@ -20,7 +20,12 @@ def default_url_options
 end
 
 def params_variable
- 
+  @types = Type.all
+  @salesauto = Sale.where(type_id: '1')
+  @salesteh = Sale.where(type_id: '2')
+  @purchasesauto = Purchase.where(type_id: '1')
+  @purchasesteh = Purchase.where(type_id: '2')
+  @time = Time.now
 end
 
 end

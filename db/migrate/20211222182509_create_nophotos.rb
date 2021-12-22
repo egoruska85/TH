@@ -1,0 +1,8 @@
+class CreateNophotos < ActiveRecord::Migration[6.1]
+  def change
+    create_table :nophotos do |t|
+
+      t.timestamps
+    end
+  end
+end
