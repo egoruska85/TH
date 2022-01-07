@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_22_182509) do
+ActiveRecord::Schema.define(version: 2022_01_07_170409) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_tm"
+    t.string "title_en"
+    t.string "text_ru"
+    t.string "text_tm"
+    t.string "text_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false

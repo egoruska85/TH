@@ -9599,3 +9599,62 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 339)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAbouts (20220107170409)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "abouts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title_ru" varchar, "title_tm" varchar, "title_en" varchar, "text_ru" varchar, "text_tm" varchar, "text_en" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220107170409"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/" for ::1 at 2022-01-07 22:04:33 +0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9:in `block (2 levels) in <main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "abouts"[0m
+  [1m[36mAbout Load (0.1ms)[0m  [1m[34mSELECT "abouts".* FROM "abouts" ORDER BY "abouts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "nophotos"[0m
+  [1m[36mNophoto Load (0.1ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos" ORDER BY "nophotos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "purchases"[0m
+  [1m[36mPurchase Load (0.1ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" ORDER BY "purchases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "sales"[0m
+  [1m[36mSale Load (0.1ms)[0m  [1m[34mSELECT "sales".* FROM "sales" ORDER BY "sales"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "types"[0m
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types" ORDER BY "types"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_variant_records"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (Duration: 28.6ms | Allocations: 23658)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 107.0ms | Allocations: 174040)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 3.0ms | Allocations: 4419)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 9.0ms | Allocations: 10120)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 4.1ms | Allocations: 6106)
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 3.0ms | Allocations: 5108)
+  Rendered layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 164.4ms | Allocations: 226581)
+Completed 200 OK in 299ms (Views: 166.6ms | ActiveRecord: 8.5ms | Allocations: 360985)
+
+
+Started GET "/admin/about?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2022-01-07 22:04:43 +0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"about"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9:in `block (2 levels) in <main>'
+  Rendering layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAbout Load (0.1ms)[0m  [1m[34mSELECT "abouts".* FROM "abouts" ORDER BY abouts.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 25.8ms | Allocations: 43308)
+  Rendered layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 28.0ms | Allocations: 45148)
+Completed 200 OK in 36ms (Views: 29.0ms | ActiveRecord: 0.2ms | Allocations: 51074)
+
+
