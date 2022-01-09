@@ -1,0 +1,11 @@
+<div class="container">
+  <center><h1><%= @service.name_ru %></h1></center>
+  <div class="row">
+    <div class="col-6">
+      <%= image_tag(@service.image, style:'width: 100%') %>
+    </div>
+    <div class="col-6">
+      <%= @service.text_ru %>
+    </div>
+  </div>
+</div>

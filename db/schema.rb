@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_09_172925) do
+ActiveRecord::Schema.define(version: 2022_01_09_175955) do
 
   create_table "abouts", force: :cascade do |t|
     t.string "title_ru"
@@ -95,11 +95,23 @@ ActiveRecord::Schema.define(version: 2022_01_09_172925) do
     t.index ["type_id"], name: "index_sales_on_type_id"
   end
 
+  create_table "services", force: :cascade do |t|
+    t.string "name_ru"
+    t.string "name_tm"
+    t.string "name_en"
+    t.text "text_ru"
+    t.text "text_tm"
+    t.text "text_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name_tm"
+    t.string "name_en"
   end
 
   create_table "users", force: :cascade do |t|
