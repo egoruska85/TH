@@ -110,8 +110,35 @@
                 </li>-->
                 <li class="has-children">
                   <a href="#about-section" class="nav-link">Коммиссионые услуги</a>
+
                   <ul class="dropdown arrow-top">
-                    <% @types.each do |type| %>
+                    <li class="has-children">
+                      <a href="#">ПРОДАЖА</a>
+                      <ul class="dropdown">
+                          <% @types.each do |type| %>
+                          <li>
+                            <%= link_to sale_path(type) do %>
+                              <%= type.name %>
+                            <% end %>
+                          </li>
+                        <% end %>
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                      <a href="#">ПОКУПКА</a>
+                      <ul class="dropdown">
+                          <% @types.each do |type| %>
+                          <li>
+                            <%= link_to purchase_path(type) do %>
+                              <%= type.name %>
+                            <% end %>
+                          </li>
+                        <% end %>
+                      </ul>
+                    </li>
+
+
+                    <!--<% @types.each do |type| %>
                       <li>
                         <%= link_to sale_path(type) do %>
                           <%= type.name %>
@@ -124,7 +151,7 @@
                           <%= type.name %>
                         <% end %>
                       </li>
-                    <% end %>
+                    <% end %>-->
                   </ul>
                 </li>
                 <li class="has-children">

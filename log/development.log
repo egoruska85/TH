@@ -11265,3 +11265,1732 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
 
 
+Started GET "/?locale=ru" for ::1 at 2022-01-09 22:39:01 +0500
+Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mLogo Load (0.2ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/home/index.html.erb:68
+  Rendered home/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 725)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:114
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 9932)
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 0.8ms | Allocations: 11137)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQxOjU1LjU0NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b9b851acf9ddb04f3f01a2de8151a05ecdfd7c3d/logoth.png" for ::1 at 2022-01-09 22:39:01 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/?locale=ru" for ::1 at 2022-01-09 22:43:19 +0500
+Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mLogo Load (0.2ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/home/index.html.erb:68
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:117
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 10817)
+Completed 200 OK in 37ms (Views: 28.1ms | ActiveRecord: 0.8ms | Allocations: 13197)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518/logoth.png?locale=ru" for ::1 at 2022-01-09 22:43:19 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518", "filename"=>"logoth"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: oichq4vh167ul5gxbqswel0342hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1479)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:43:19 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/sales/1?locale=ru" for ::1 at 2022-01-09 22:43:26 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.4ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.1ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/sales/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  Rendered sales/show.html.erb within layouts/application (Duration: 16.8ms | Allocations: 7038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:117
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 16152)
+Completed 200 OK in 48ms (Views: 28.0ms | ActiveRecord: 3.1ms | Allocations: 20294)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:43:26 +0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eac661384652562b143d90f2569b8da0d12d0981/1.jpeg?locale=ru" for ::1 at 2022-01-09 22:43:26 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eac661384652562b143d90f2569b8da0d12d0981", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 8nwk0i3g805140jyjrobue20leu7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg)[0m
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eab4fcbe5431cbbf47fc576793d14eab46ca7f9d/not.png?locale=ru" for ::1 at 2022-01-09 22:43:26 +0500
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2058)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eab4fcbe5431cbbf47fc576793d14eab46ca7f9d", "filename"=>"not"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: l7s282a00f6xjchkz34ddnqdv613 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 3643)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 801)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg" for ::1 at 2022-01-09 22:43:26 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:43:26 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:43:40 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg" for ::1 at 2022-01-09 22:43:40 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:43:40 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/sales/1?locale=ru" for ::1 at 2022-01-09 22:43:59 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.1ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.1ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/sales/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  Rendered sales/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 8014)
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:43:59 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg" for ::1 at 2022-01-09 22:43:59 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:117
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 24746)
+Completed 200 OK in 47ms (Views: 41.7ms | ActiveRecord: 1.6ms | Allocations: 26551)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:43:59 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg" for ::1 at 2022-01-09 22:43:59 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:43:59 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 926)
+
+
+Started GET "/admin/logo" for ::1 at 2022-01-09 22:44:14 +0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"logo"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9:in `block (2 levels) in <main>'
+  Rendering layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mLogo Load (0.1ms)[0m  [1m[34mSELECT "logos".* FROM "logos" ORDER BY logos.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 43.6ms | Allocations: 46902)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 27.7ms | Allocations: 76327)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 2.7ms | Allocations: 4312)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 6.4ms | Allocations: 9978)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 4.4ms | Allocations: 6511)
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 4.5ms | Allocations: 6200)
+  Rendered layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 93.8ms | Allocations: 153439)
+Completed 200 OK in 110ms (Views: 98.8ms | ActiveRecord: 0.8ms | Allocations: 156031)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdscGFRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--08e27ef876672b3e7f855829d0af3e585b668174/logoth.png" for ::1 at 2022-01-09 22:44:14 +0500
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518", "variation_key"=>"[FILTERED]", "filename"=>"logoth"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 10], ["variation_digest", "uyx6Kcit1Aa78Mrn7bVgZ7OZn0Y="], ["LIMIT", 1]]
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: oichq4vh167ul5gxbqswel0342hm[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 5732)
+
+
+  
+LoadError (Generating image variants require the image_processing gem. Please add `gem 'image_processing', '~> 1.2'` to your Gemfile.):
+  
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:6:in `rescue in <main>'
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:3:in `<main>'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/loaded_features_index.rb:100:in `register'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+zeitwerk (2.5.1) lib/zeitwerk/kernel.rb:35:in `require'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:83:in `transformer'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:56:in `block in transform'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:205:in `instrument'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:55:in `transform'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:35:in `block in transform_blob'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:15:in `block in open'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:24:in `open_tempfile'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:12:in `open'
+activestorage (6.1.4.1) lib/active_storage/service.rb:90:in `open'
+activestorage (6.1.4.1) app/models/active_storage/blob.rb:276:in `open'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:34:in `transform_blob'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:16:in `process'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:11:in `processed'
+activestorage (6.1.4.1) app/controllers/active_storage/representations/base_controller.rb:10:in `set_representation'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/admin/sale?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2022-01-09 22:44:15 +0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"sale"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9:in `block (2 levels) in <main>'
+  Rendering layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" ORDER BY sales.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types" WHERE "types"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdscGFRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--08e27ef876672b3e7f855829d0af3e585b668174/logoth.png" for ::1 at 2022-01-09 22:44:15 +0500
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 21.6ms | Allocations: 19013)
+  Rendered layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 24.1ms | Allocations: 20887)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.4ms | Allocations: 22826)
+
+
+Processing by ActiveStorage::Representations::RedirectController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518", "variation_key"=>"[FILTERED]", "filename"=>"logoth"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 10], ["variation_digest", "uyx6Kcit1Aa78Mrn7bVgZ7OZn0Y="], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: oichq4vh167ul5gxbqswel0342hm[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 3948)
+
+
+  
+LoadError (Generating image variants require the image_processing gem. Please add `gem 'image_processing', '~> 1.2'` to your Gemfile.):
+  
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:6:in `rescue in <main>'
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:3:in `<main>'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/loaded_features_index.rb:100:in `register'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+zeitwerk (2.5.1) lib/zeitwerk/kernel.rb:35:in `require'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:83:in `transformer'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:56:in `block in transform'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:205:in `instrument'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:55:in `transform'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:35:in `block in transform_blob'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:15:in `block in open'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:24:in `open_tempfile'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:12:in `open'
+activestorage (6.1.4.1) lib/active_storage/service.rb:90:in `open'
+activestorage (6.1.4.1) app/models/active_storage/blob.rb:276:in `open'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:34:in `transform_blob'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:16:in `process'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:11:in `processed'
+activestorage (6.1.4.1) app/controllers/active_storage/representations/base_controller.rb:10:in `set_representation'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/sales/1?locale=ru" for ::1 at 2022-01-09 22:46:40 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/sales/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  Rendered sales/show.html.erb within layouts/application (Duration: 18.9ms | Allocations: 6392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:117
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 16287)
+Completed 200 OK in 48ms (Views: 34.8ms | ActiveRecord: 1.5ms | Allocations: 19244)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg" for ::1 at 2022-01-09 22:46:40 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:46:40 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:46:40 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/purchases/1?locale=ru" for ::1 at 2022-01-09 22:46:47 +0500
+Processing by PurchasesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.3ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/purchases_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.4ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/purchases/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  Rendered purchases/show.html.erb within layouts/application (Duration: 29.8ms | Allocations: 12207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.0ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:117
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 21320)
+Completed 200 OK in 59ms (Views: 41.5ms | ActiveRecord: 2.3ms | Allocations: 24585)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:46:47 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fdc8d3a57ddab03a2c041100b8d24b17ecea5be1/4.jpeg?locale=ru" for ::1 at 2022-01-09 22:46:47 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:46:47 +0500
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Processing by ActiveStorage::DiskController#show as PNG
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fdc8d3a57ddab03a2c041100b8d24b17ecea5be1", "filename"=>"4"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: dlk3kw3ykw8irzewu4drzkgnrukp (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1557)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg" for ::1 at 2022-01-09 22:46:47 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNDNaIiwicHVyIjoiYmxvYl9rZXkifX0=--217a4eb0b26beac70487e3d37e381862150f2d50/1.jpeg" for ::1 at 2022-01-09 22:46:47 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/purchases/1?locale=ru" for ::1 at 2022-01-09 22:46:53 +0500
+Processing by PurchasesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/purchases_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.3ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/purchases/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  Rendered purchases/show.html.erb within layouts/application (Duration: 22.2ms | Allocations: 6021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:117
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 15238)
+Completed 200 OK in 49ms (Views: 35.6ms | ActiveRecord: 1.7ms | Allocations: 17083)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:46:53 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg" for ::1 at 2022-01-09 22:46:53 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:46:53 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/purchases/1?locale=ru" for ::1 at 2022-01-09 22:47:24 +0500
+Processing by PurchasesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/purchases_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/purchases/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  Rendered purchases/show.html.erb within layouts/application (Duration: 22.4ms | Allocations: 6395)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:114
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 16273)
+Completed 200 OK in 52ms (Views: 37.9ms | ActiveRecord: 1.5ms | Allocations: 19223)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:47:24 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg" for ::1 at 2022-01-09 22:47:24 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:47:24 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/purchases/1?locale=ru" for ::1 at 2022-01-09 22:47:37 +0500
+Processing by PurchasesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/purchases_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.2ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/purchases/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  Rendered purchases/show.html.erb within layouts/application (Duration: 18.0ms | Allocations: 6395)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:114
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 16269)
+Completed 200 OK in 45ms (Views: 31.8ms | ActiveRecord: 1.4ms | Allocations: 19227)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:47:37 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg" for ::1 at 2022-01-09 22:47:37 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:47:37 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:47:42 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.1ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.1ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.1ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 6467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:114
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 15683)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.9ms | Allocations: 19006)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjQ4OjE5Ljk4MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--40f8dfb003ab1dd64a1f4f61b8308c8be7e36df5/logoth.png" for ::1 at 2022-01-09 22:47:42 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6cc1c8300835e5384f78ced99fba9b544e7af5bf/2.jpeg?locale=ru" for ::1 at 2022-01-09 22:47:42 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo0ODoyNi4zNTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6c5abbf58caab600e41c345f29c8ce91f30d7f9/not.png" for ::1 at 2022-01-09 22:47:42 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6cc1c8300835e5384f78ced99fba9b544e7af5bf", "filename"=>"2"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: s5ztsanpvtifj7cgey7b7j7b0kxe (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2221)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg" for ::1 at 2022-01-09 22:47:42 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1MTo0Ny44OTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6c529a8fcafdb8df0a8b1ab8c7c02c8a3e6456e8/4.jpeg" for ::1 at 2022-01-09 22:47:42 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:48:45 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 19.3ms | Allocations: 6393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:122
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 16276)
+Completed 200 OK in 47ms (Views: 34.1ms | ActiveRecord: 1.5ms | Allocations: 19225)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518/logoth.png?locale=ru" for ::1 at 2022-01-09 22:48:45 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518", "filename"=>"logoth"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: oichq4vh167ul5gxbqswel0342hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1479)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:48:45 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eab4fcbe5431cbbf47fc576793d14eab46ca7f9d/not.png?locale=ru" for ::1 at 2022-01-09 22:48:45 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eab4fcbe5431cbbf47fc576793d14eab46ca7f9d", "filename"=>"not"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: l7s282a00f6xjchkz34ddnqdv613 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1471)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg" for ::1 at 2022-01-09 22:48:45 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:48:45 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:49:17 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.2ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 16.4ms | Allocations: 6397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.0ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:122
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 16280)
+Completed 200 OK in 40ms (Views: 29.2ms | ActiveRecord: 1.3ms | Allocations: 19236)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:49:17 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg" for ::1 at 2022-01-09 22:49:17 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:49:17 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:49:42 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 6393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:115
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 16269)
+Completed 200 OK in 46ms (Views: 32.3ms | ActiveRecord: 1.5ms | Allocations: 19219)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:49:42 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg" for ::1 at 2022-01-09 22:49:42 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:49:42 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:51:18 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.2ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 6397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:125
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 16289)
+Completed 200 OK in 45ms (Views: 32.7ms | ActiveRecord: 1.5ms | Allocations: 19247)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:51:18 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mjo0Mi4xNzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--65e6beb0cef67bb1924dacff693bf8b250364e31/2.jpeg" for ::1 at 2022-01-09 22:51:18 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:51:18 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms | Allocations: 3141)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:53:06 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 6393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:118
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 16516)
+Completed 200 OK in 48ms (Views: 35.1ms | ActiveRecord: 1.6ms | Allocations: 19466)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6cc1c8300835e5384f78ced99fba9b544e7af5bf/2.jpeg?locale=ru" for ::1 at 2022-01-09 22:53:06 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6cc1c8300835e5384f78ced99fba9b544e7af5bf", "filename"=>"2"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: s5ztsanpvtifj7cgey7b7j7b0kxe (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1472)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:53:06 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:53:06 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg" for ::1 at 2022-01-09 22:53:06 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 1675)
+
+
+Started GET "/sales/1?locale=ru" for ::1 at 2022-01-09 22:53:09 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.3ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/sales/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:6
+  Rendered sales/show.html.erb within layouts/application (Duration: 25.6ms | Allocations: 6066)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:118
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 15421)
+Completed 200 OK in 55ms (Views: 38.5ms | ActiveRecord: 1.8ms | Allocations: 17712)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:53:09 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:53:09 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg" for ::1 at 2022-01-09 22:53:09 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eac661384652562b143d90f2569b8da0d12d0981/1.jpeg?locale=ru" for ::1 at 2022-01-09 22:53:09 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eac661384652562b143d90f2569b8da0d12d0981", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 8nwk0i3g805140jyjrobue20leu7 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowOS45MjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--3634fc965a201aafab085ea2d95eccebda6b7034/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowOS45MjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--3634fc965a201aafab085ea2d95eccebda6b7034/1.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1611)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowOS45MjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--3634fc965a201aafab085ea2d95eccebda6b7034/1.jpeg" for ::1 at 2022-01-09 22:53:09 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 412)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:53:13 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.2ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.2ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 5937)
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:53:13 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg" for ::1 at 2022-01-09 22:53:13 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:118
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 22859)
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 1.6ms | Allocations: 24643)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPRzUzYXpCcE0yYzRNRFV4TkRCcWVXcHliMkoxWlRJd2JHVjFOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowOS45MjJaIiwicHVyIjoiYmxvYl9rZXkifX0=--3634fc965a201aafab085ea2d95eccebda6b7034/1.jpeg" for ::1 at 2022-01-09 22:53:13 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg" for ::1 at 2022-01-09 22:53:13 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjUzOjQ1LjYwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fbaa8e20d922e6ba284651bf79cb11b13ad7d81/logoth.png" for ::1 at 2022-01-09 22:53:13 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 1021)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1Mzo0NS42MTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a2ecad994741f8a285374b59e58cde5a0f3c81f6/not.png" for ::1 at 2022-01-09 22:53:13 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1262)
+
+
+Started GET "/sales/2?locale=ru" for ::1 at 2022-01-09 22:54:32 +0500
+Processing by SalesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.3ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/sales_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sales/show.html.erb within layouts/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/sales/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sales/show.html.erb:19
+  Rendered sales/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 6397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:118
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 16753)
+Completed 200 OK in 44ms (Views: 31.4ms | ActiveRecord: 1.5ms | Allocations: 19711)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518/logoth.png?locale=ru" for ::1 at 2022-01-09 22:54:32 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d9631a3ff3e93385e691953c902ec729ca4a1518", "filename"=>"logoth"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: oichq4vh167ul5gxbqswel0342hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjU5OjMyLjU5OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ad619b97b5a724c41e72e8419c331879fe357f18/logoth.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjU5OjMyLjU5OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ad619b97b5a724c41e72e8419c331879fe357f18/logoth.png
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eab4fcbe5431cbbf47fc576793d14eab46ca7f9d/not.png?locale=ru" for ::1 at 2022-01-09 22:54:32 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eab4fcbe5431cbbf47fc576793d14eab46ca7f9d", "filename"=>"not"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 3316)
+
+
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: l7s282a00f6xjchkz34ddnqdv613 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozMi42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--80206bd2a850c2329336f4823346779ee4ae2e48/not.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozMi42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--80206bd2a850c2329336f4823346779ee4ae2e48/not.png
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms | Allocations: 4567)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg" for ::1 at 2022-01-09 22:54:32 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjU5OjMyLjU5OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ad619b97b5a724c41e72e8419c331879fe357f18/logoth.png" for ::1 at 2022-01-09 22:54:32 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozMi42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--80206bd2a850c2329336f4823346779ee4ae2e48/not.png" for ::1 at 2022-01-09 22:54:32 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/purchases/1?locale=ru" for ::1 at 2022-01-09 22:54:36 +0500
+Processing by PurchasesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"1"}
+  [1m[36mLogo Load (0.4ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.3ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/purchases_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.3ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."type_id" = ?[0m  [["type_id", 1]]
+  ↳ app/views/purchases/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:6
+  Rendered purchases/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 6444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:118
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 15950)
+Completed 200 OK in 44ms (Views: 29.4ms | ActiveRecord: 1.8ms | Allocations: 19345)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fdc8d3a57ddab03a2c041100b8d24b17ecea5be1/4.jpeg?locale=ru" for ::1 at 2022-01-09 22:54:36 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fdc8d3a57ddab03a2c041100b8d24b17ecea5be1", "filename"=>"4"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: dlk3kw3ykw8irzewu4drzkgnrukp (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozNi4zMjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--7e173fc29e53e058303eb179a97020335e28b81f/4.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozNi4zMjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--7e173fc29e53e058303eb179a97020335e28b81f/4.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1472)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozMi42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--80206bd2a850c2329336f4823346779ee4ae2e48/not.png" for ::1 at 2022-01-09 22:54:36 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjU5OjMyLjU5OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ad619b97b5a724c41e72e8419c331879fe357f18/logoth.png" for ::1 at 2022-01-09 22:54:36 +0500
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 448)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozNi4zMjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--7e173fc29e53e058303eb179a97020335e28b81f/4.jpeg" for ::1 at 2022-01-09 22:54:36 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjelY2ZEhOaGJuQjJkR2xtYWpkaloyVjVOMkkzYWpkaU1HdDRaUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTWk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1ODowNi4yNTlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d5a37b565c3a05f4298c0805f2ac225f4d197727/2.jpeg" for ::1 at 2022-01-09 22:54:36 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/purchases/2?locale=ru" for ::1 at 2022-01-09 22:54:39 +0500
+Processing by PurchasesController#show as HTML
+  Parameters: {"locale"=>"ru", "id"=>"2"}
+  [1m[36mLogo Load (0.3ms)[0m  [1m[34mSELECT "logos".* FROM "logos"[0m
+  ↳ app/controllers/application_controller.rb:25:in `params_variable'
+  [1m[36mNophoto Load (0.3ms)[0m  [1m[34mSELECT "nophotos".* FROM "nophotos"[0m
+  ↳ app/controllers/purchases_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering purchases/show.html.erb within layouts/application
+  [1m[36mPurchase Load (0.3ms)[0m  [1m[34mSELECT "purchases".* FROM "purchases" WHERE "purchases"."type_id" = ?[0m  [["type_id", 2]]
+  ↳ app/views/purchases/show.html.erb:15
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Purchase"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Nophoto"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/purchases/show.html.erb:19
+  Rendered purchases/show.html.erb within layouts/application (Duration: 23.2ms | Allocations: 6055)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Logo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:83
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/layouts/application.html.erb:118
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 15555)
+Completed 200 OK in 50ms (Views: 34.1ms | ActiveRecord: 1.8ms | Allocations: 17827)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiMmxqYUhFMGRtZ3hOamQxYkRWbmVHSnhjM2RsYkRBek5ESm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW14dloyOTBhQzV3Ym1jaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyeHZaMjkwYUM1d2JtY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzVwYldGblpTOXdibWNHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOiIyMDIyLTAxLTA5VDE3OjU5OjMyLjU5OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ad619b97b5a724c41e72e8419c331879fe357f18/logoth.png" for ::1 at 2022-01-09 22:54:39 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRGR6TWpneVlUQXdaalo0YW1Ob2Ezb3pOR1JrYm5Ga2RqWXhNd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dmRDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjI1dmRDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozMi42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--80206bd2a850c2329336f4823346779ee4ae2e48/not.png" for ::1 at 2022-01-09 22:54:39 +0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"logoth"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f87591db94067369016188886b5d3333c1625ac4/6.jpeg?locale=ru" for ::1 at 2022-01-09 22:54:39 +0500
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1169)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"locale"=>"ru", "signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f87591db94067369016188886b5d3333c1625ac4", "filename"=>"6"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 5jmb4jlfavzlfqm3os0dwfadif0w (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3B0WWpScWJHWmhkbnBzWm5GdE0yOXpNR1IzWm1Ga2FXWXdkd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTmk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozOS42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--138d311fcc755aab45730ed7e0603ff2f72b1c55/6.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3B0WWpScWJHWmhkbnBzWm5GdE0yOXpNR1IzWm1Ga2FXWXdkd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTmk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozOS42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--138d311fcc755aab45730ed7e0603ff2f72b1c55/6.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1472)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"not"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOV3B0WWpScWJHWmhkbnBzWm5GdE0yOXpNR1IzWm1Ga2FXWXdkd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpZdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTmk1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozOS42MDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--138d311fcc755aab45730ed7e0603ff2f72b1c55/6.jpeg" for ::1 at 2022-01-09 22:54:39 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"6"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR3hyTTJ0M00zbHJkemhwY25wbGQzVTBaSEo2YTJkdWNuVnJjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpRdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTkM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMi0wMS0wOVQxNzo1OTozNi4zMjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--7e173fc29e53e058303eb179a97020335e28b81f/4.jpeg" for ::1 at 2022-01-09 22:54:39 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"4"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/admin/sale" for ::1 at 2022-01-09 22:54:46 +0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"sale"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9:in `block (2 levels) in <main>'
+  Rendering layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT "sales".* FROM "sales" ORDER BY sales.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types" WHERE "types"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 49.9ms | Allocations: 52653)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (Duration: 30.9ms | Allocations: 76326)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 3.0ms | Allocations: 4304)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 6.8ms | Allocations: 9981)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 4.2ms | Allocations: 6495)
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 4.4ms | Allocations: 6188)
+  Rendered layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/application.html.haml (Duration: 101.5ms | Allocations: 159149)
+Completed 200 OK in 116ms (Views: 106.0ms | ActiveRecord: 0.7ms | Allocations: 161791)
+
+
+Started GET "/admin/sale/1/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2022-01-09 22:54:48 +0500
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"sale", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9:in `block (2 levels) in <main>'
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT "sales".* FROM "sales" WHERE "sales"."id" = ? ORDER BY "sales"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendering /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_field.html.haml (Duration: 2.0ms | Allocations: 1797)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 200)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_text.html.haml (Duration: 1.9ms | Allocations: 1844)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_text.html.haml (Duration: 0.4ms | Allocations: 268)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 199)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 199)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 199)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 199)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_boolean.html.haml (Duration: 1.9ms | Allocations: 2443)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_boolean.html.haml (Duration: 0.2ms | Allocations: 212)
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types" WHERE "types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types" ORDER BY types.id desc[0m
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_filtering_select.html.haml (Duration: 7.9ms | Allocations: 7714)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Sale"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_file_upload.html.haml (Duration: 7.8ms | Allocations: 9458)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Sale"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_form_multiple_file_upload.html.haml (Duration: 7.2ms | Allocations: 8990)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 5.0ms | Allocations: 10443)
+  Rendered /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (Duration: 53.8ms | Allocations: 55778)
+  Rendered layout /home/egor/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (Duration: 57.2ms | Allocations: 59000)
+Completed 200 OK in 70ms (Views: 59.6ms | ActiveRecord: 1.1ms | Allocations: 62557)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eac661384652562b143d90f2569b8da0d12d0981/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJscGFXaz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--ec29c847a501dfed8b7e969fe97b3684d67f3406/1.jpeg" for ::1 at 2022-01-09 22:54:49 +0500
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4126b040c1638ada80678592c33a89fcd2ccd1e4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVdscGFRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--e2697e5cefd22b7f444784161844fbdd343fafed/IMG_20190723_093337.jpg" for ::1 at 2022-01-09 22:54:49 +0500
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eac661384652562b143d90f2569b8da0d12d0981", "variation_key"=>"[FILTERED]", "filename"=>"1"}
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4126b040c1638ada80678592c33a89fcd2ccd1e4", "variation_key"=>"[FILTERED]", "filename"=>"IMG_20190723_093337"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "6/MbmLdOctrj7ukuFyVm7nWShm4="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 2], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: 8nwk0i3g805140jyjrobue20leu7[0m
+[36m  Disk Storage (2.5ms) [0m[34mDownloaded file from key: regyc1qr9avedpfhlsuwf0ybrvg6[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 8177)
+
+
+  
+LoadError (Generating image variants require the image_processing gem. Please add `gem 'image_processing', '~> 1.2'` to your Gemfile.):
+  
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:6:in `rescue in <main>'
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:3:in `<main>'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/loaded_features_index.rb:100:in `register'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+zeitwerk (2.5.1) lib/zeitwerk/kernel.rb:35:in `require'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:83:in `transformer'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:56:in `block in transform'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:205:in `instrument'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:55:in `transform'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:35:in `block in transform_blob'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:15:in `block in open'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:24:in `open_tempfile'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:12:in `open'
+activestorage (6.1.4.1) lib/active_storage/service.rb:90:in `open'
+activestorage (6.1.4.1) app/models/active_storage/blob.rb:276:in `open'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:34:in `transform_blob'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:16:in `process'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:11:in `processed'
+activestorage (6.1.4.1) app/controllers/active_storage/representations/base_controller.rb:10:in `set_representation'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.2ms | Allocations: 115959)
+
+
+  
+LoadError (Generating image variants require the image_processing gem. Please add `gem 'image_processing', '~> 1.2'` to your Gemfile.):
+  
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:6:in `rescue in <main>'
+activestorage (6.1.4.1) lib/active_storage/transformers/image_processing_transformer.rb:3:in `<main>'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/loaded_features_index.rb:100:in `register'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+bootsnap (1.9.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+zeitwerk (2.5.1) lib/zeitwerk/kernel.rb:35:in `require'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:83:in `transformer'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:56:in `block in transform'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:205:in `instrument'
+activestorage (6.1.4.1) app/models/active_storage/variation.rb:55:in `transform'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:35:in `block in transform_blob'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:15:in `block in open'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:24:in `open_tempfile'
+activestorage (6.1.4.1) lib/active_storage/downloader.rb:12:in `open'
+activestorage (6.1.4.1) lib/active_storage/service.rb:90:in `open'
+activestorage (6.1.4.1) app/models/active_storage/blob.rb:276:in `open'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:34:in `transform_blob'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:16:in `process'
+activestorage (6.1.4.1) app/models/active_storage/variant_with_record.rb:11:in `processed'
+activestorage (6.1.4.1) app/controllers/active_storage/representations/base_controller.rb:10:in `set_representation'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
