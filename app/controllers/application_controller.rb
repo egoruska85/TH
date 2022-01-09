@@ -21,6 +21,10 @@ end
 
 def params_variable
   @types = Type.all
+  @logos = Logo.all
+  @logos.each do |logo|
+    @logo = logo.image
+  end
   @salesauto = Sale.where(type_id: '1')
   @salesteh = Sale.where(type_id: '2')
   @purchasesauto = Purchase.where(type_id: '1')

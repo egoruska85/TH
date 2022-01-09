@@ -74,12 +74,16 @@
 
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
-      <div class="container">
+      <div class="container-fluid">
         <div class="row align-items-center position-relative">
 
 
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">TIJEGLI HYZMAT</a>
+              <%= link_to root_path, class:'text-black' do %>
+                <%= image_tag(@logo, style:'width: 95px') %>
+                <span class="text-primary">TIJEGLI HYZMAT</span>
+              <% end %>
+              <!--<a href="index.html" class="text-black"><span class="text-primary">TIJEGLI HYZMAT</a>-->
             </div>
 
             <div class="col-12">
