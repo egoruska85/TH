@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_09_175955) do
+ActiveRecord::Schema.define(version: 2022_01_09_193912) do
 
   create_table "abouts", force: :cascade do |t|
     t.string "title_ru"
@@ -75,7 +75,17 @@ ActiveRecord::Schema.define(version: 2022_01_09_175955) do
     t.integer "type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "region_id"
+    t.index ["region_id"], name: "index_purchases_on_region_id"
     t.index ["type_id"], name: "index_purchases_on_type_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.string "name_tm"
+    t.string "name_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "sales", force: :cascade do |t|
@@ -92,6 +102,8 @@ ActiveRecord::Schema.define(version: 2022_01_09_175955) do
     t.integer "type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "region_id"
+    t.index ["region_id"], name: "index_sales_on_region_id"
     t.index ["type_id"], name: "index_sales_on_type_id"
   end
 
@@ -129,6 +141,8 @@ ActiveRecord::Schema.define(version: 2022_01_09_175955) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "purchases", "regions"
   add_foreign_key "purchases", "types"
+  add_foreign_key "sales", "regions"
   add_foreign_key "sales", "types"
 end
