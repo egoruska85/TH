@@ -90,7 +90,12 @@
               <nav class="site-navigation text-right ml-auto " role="navigation">
 
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li>
+                  <!--<a href="#home-section" class="nav-link">Главная</a>-->
+                  <%= link_to root_path do %>
+                    Главная
+                  <% end %>
+                </li>
                 <li>
                   <!--<a href="#services-section" class="nav-link">Услуги</a>-->
                   <%= link_to services_path do %>
@@ -164,23 +169,16 @@
                   <ul class="dropdown arrow-top">
                     <li><a href="#team-section" class="nav-link">Сроительная техника</a></li>
                     <li><a href="#pricing-section" class="nav-link">Дорожная техника</a></li>
-                    <li><a href="#faq-section" class="nav-link">Резиновые хуи</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
+
+
                   </ul>
                 </li>
 
-                <li><a href="#press-section" class="nav-link">Press</a></li>
-
-                <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li><!--<a href="#press-section" class="nav-link">О нас</a>-->
+                <%= link_to root_path + '#p1' do %>
+                  О нас
+                <% end %>
+                </li>
               </ul>
               </nav>
 

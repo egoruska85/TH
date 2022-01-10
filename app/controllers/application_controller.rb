@@ -20,13 +20,22 @@ def default_url_options
 end
 
 def params_variable
+  @abouts = About.all
+  @aboutimages = Aboutimage.all
+  @aboutimages.each do |image|
+    @aboutimage = image.image
+
+  end
+
   @types = Type.all
   @logos = Logo.all
   @logos.each do |logo|
     @logo = logo.image
   end
   @salesauto = Sale.where(type_id: '1')
+  @saf = @salesauto.where(sales: false)
   @salesteh = Sale.where(type_id: '2')
+  @stf = @salesteh.where(sales: false)
   @purchasesauto = Purchase.where(type_id: '1')
   @purchasesteh = Purchase.where(type_id: '2')
   @time = Time.now

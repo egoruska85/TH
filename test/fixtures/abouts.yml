@@ -4,14 +4,14 @@ one:
   title_ru: MyString
   title_tm: MyString
   title_en: MyString
-  text_ru: MyString
-  text_tm: MyString
-  text_en: MyString
+  text_ru: MyText
+  text_tm: MyText
+  text_en: MyText
 
 two:
   title_ru: MyString
   title_tm: MyString
   title_en: MyString
-  text_ru: MyString
-  text_tm: MyString
-  text_en: MyString
+  text_ru: MyText
+  text_tm: MyText
+  text_en: MyText

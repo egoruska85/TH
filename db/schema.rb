@@ -10,15 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_09_193912) do
+ActiveRecord::Schema.define(version: 2022_01_10_085533) do
+
+  create_table "aboutimages", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "abouts", force: :cascade do |t|
     t.string "title_ru"
     t.string "title_tm"
     t.string "title_en"
-    t.string "text_ru"
-    t.string "text_tm"
-    t.string "text_en"
+    t.text "text_ru"
+    t.text "text_tm"
+    t.text "text_en"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
