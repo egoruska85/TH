@@ -7,10 +7,10 @@
         <% @services.each do |service| %>
           <div class="col-6">
             <center>
-              <h1><%= service.name_ru %></h1>
-              <%= image_tag(service.image) %>
+              <h4><%= service.name_ru %></h4>
+              <%= image_tag(service.image, style:'width: 50%') %>
             </center>
-              <%= simple_format service.text_ru.length <= 200 ? service.text_ru : service.text_ru[0..200] + '.....'  %>
+              <%= simple_format service.text_ru.length <= 200 ? service.text_ru : service.text_ru[0..200] + '.....', style:'font-size: 13px'  %>
               <%= link_to service_path(service) do %>
                 Подробнее
               <% end %>

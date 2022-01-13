@@ -1,2 +1,21 @@
 ru:
-  services: "услуги" 
+  services: "услуги"
+  sales:
+    phones: "Телефоны:"
+    price: "Цена:"
+    cashless: "Безналично"
+  navbar:
+    main: "Главная"
+    services: "Услуги"
+    comm_services: "Коммиссионые услуги"
+    sale: "ПРОДАЖА"
+    purchase: "ПОКУПКА"
+    rent: "Аренда"
+    about: "О нас"
+  sale:
+    sales: "ПРОДАНО"
+    sales_back: "НА ГЛАВНУЮ"
+  rent:
+    car: "Аренда автомобилей"
+    teh: "Аренда строительной техники"
+    mat: "Аренда строительных материалов"

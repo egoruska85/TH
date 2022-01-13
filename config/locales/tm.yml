@@ -1,0 +1,21 @@
+tm:
+  services: "hyzmatlar"
+  sales:
+    phones: "Telefonlar:"
+    price: "Bahasy:"
+    cashless: "Nagt däl"
+  navbar:
+    main: "Baş sahypa"
+    services: "Hyzmatlar"
+    comm_services: "Kommission Hyzmatlary"
+    sale: "SATUW"
+    purchase: "SATYN ALMAK"
+    rent: "Kärenda"
+    about: "Biž barada"
+  sale:
+    sales: "SATYŞ"
+    sales_back: "BAŞ SAHYPA"
+  rent:
+    car: "Kärenda awtoulag"
+    teh: "Kärenda gurluşyk tehnikasy"
+    mat: "Kärenda gurluşyk harytlary"

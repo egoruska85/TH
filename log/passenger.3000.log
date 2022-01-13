@@ -1,0 +1,90 @@
+2022/01/12 03:27:52 [emerg] 58064#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:27:52 [emerg] 58064#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:27:52 [emerg] 58064#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:27:52 [emerg] 58064#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:27:52 [emerg] 58064#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:27:52 [emerg] 58064#0: still could not bind()
+2022/01/12 03:28:08 [emerg] 58135#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:28:08 [emerg] 58135#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:28:08 [emerg] 58135#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:28:08 [emerg] 58135#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:28:08 [emerg] 58135#0: bind() to 0.0.0.0:3000 failed (98: Address already in use)
+2022/01/12 03:28:08 [emerg] 58135#0: still could not bind()
+[ N 2022-01-12 03:29:35.8083 3693/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2022-01-12 03:29:35.8268 3698/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-12 03:29:35.8269 3698/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2022-01-12 03:29:35.8476 3698/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 3698
+[ E 2022-01-12 03:29:38.0423 3698/T5 age/Cor/SecurityUpdateChecker.h:507 ]: Security update check failed: Couldn't connect to server for https://securitycheck.phusionpassenger.com/v1/check.json (if this error persists check your connection security or try upgrading Passenger) (next check in 24 hours)
+
+[ N 2022-01-12 03:30:18.7497 3698/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-12 03:30:18.7499 3698/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-12 03:30:18.7499 3698/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 3787, application /home/egor/Рабочий стол/PROJECT/th (development)
+[ N 2022-01-12 03:30:18.7502 3698/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7502 3698/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7502 3698/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7502 3698/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-12 03:30:18.7502 3698/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7503 3698/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-12 03:30:18.7503 3698/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-12 03:30:18.7503 3698/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-12 03:30:18.7503 3698/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7503 3698/Th Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7504 3698/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-12 03:30:18.7504 3698/Th Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-12 03:30:18.7505 3698/Tk Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-12 03:30:18.7505 3698/Tk Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-12 03:30:18.7510 3698/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 3787, application /home/egor/Рабочий стол/PROJECT/th (development)
+[ E 2022-01-12 03:30:19.1529 3698/T1 age/Cor/TelemetryCollector.h:455 ]: Error contacting anonymous telemetry server: Failed to connect to anontelemetry.phusionpassenger.com port 443: Connection refused
+[ N 2022-01-12 03:30:19.2256 3698/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-12 03:30:25.8594 4006/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2022-01-12 03:30:25.8699 4009/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-12 03:30:25.8700 4009/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2022-01-12 03:30:25.8784 4009/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 4009
+[ E 2022-01-12 03:30:28.0092 4009/T5 age/Cor/SecurityUpdateChecker.h:507 ]: Security update check failed: Couldn't connect to server for https://securitycheck.phusionpassenger.com/v1/check.json (if this error persists check your connection security or try upgrading Passenger) (next check in 24 hours)
+
+[ N 2022-01-12 03:33:19.4673 4009/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-12 03:33:19.4674 4009/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-12 03:33:19.4674 4009/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 4098, application /home/egor/Рабочий стол/PROJECT/th (development)
+[ N 2022-01-12 03:33:19.4675 4009/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4675 4009/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4675 4009/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-12 03:33:19.4675 4009/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-12 03:33:19.4675 4009/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4675 4009/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4675 4009/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-12 03:33:19.4675 4009/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-12 03:33:19.4675 4009/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4675 4009/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-12 03:33:19.4676 4009/Tk Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4676 4009/Tk Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-12 03:33:19.4676 4009/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-12 03:33:19.4676 4009/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-12 03:33:19.4677 4009/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 4098, application /home/egor/Рабочий стол/PROJECT/th (development)
+[ E 2022-01-12 03:33:19.7895 4009/T1 age/Cor/TelemetryCollector.h:455 ]: Error contacting anonymous telemetry server: Failed to connect to anontelemetry.phusionpassenger.com port 443: Connection refused
+[ N 2022-01-12 03:33:19.8624 4009/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished
+[ N 2022-01-12 03:33:37.0787 5099/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2022-01-12 03:33:37.0890 5103/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-12 03:33:37.0890 5103/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2022-01-12 03:33:37.0975 5103/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 5103
+[ E 2022-01-12 03:33:39.2245 5103/T5 age/Cor/SecurityUpdateChecker.h:507 ]: Security update check failed: Couldn't connect to server for https://securitycheck.phusionpassenger.com/v1/check.json (if this error persists check your connection security or try upgrading Passenger) (next check in 24 hours)
+
+[ N 2022-01-12 03:34:42.6368 5103/T8 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-12 03:34:42.6369 5103/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-12 03:34:42.6370 5103/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 5190, application /home/egor/Рабочий стол/PROJECT/th (development)
+[ N 2022-01-12 03:34:42.6372 5103/Ta Ser/Server.h:902 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6373 5103/Tg Ser/Server.h:902 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6373 5103/Tc Ser/Server.h:902 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6373 5103/Ta Ser/Server.h:558 ]: [ServerThr.2] Shutdown finished
+[ N 2022-01-12 03:34:42.6373 5103/Te Ser/Server.h:902 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6373 5103/Tg Ser/Server.h:558 ]: [ServerThr.5] Shutdown finished
+[ N 2022-01-12 03:34:42.6373 5103/Tc Ser/Server.h:558 ]: [ServerThr.3] Shutdown finished
+[ N 2022-01-12 03:34:42.6374 5103/Te Ser/Server.h:558 ]: [ServerThr.4] Shutdown finished
+[ N 2022-01-12 03:34:42.6374 5103/Ti Ser/Server.h:902 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6374 5103/T8 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6374 5103/Ti Ser/Server.h:558 ]: [ServerThr.6] Shutdown finished
+[ N 2022-01-12 03:34:42.6374 5103/T8 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-12 03:34:42.6376 5103/Tk Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-12 03:34:42.6376 5103/Tk Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-12 03:34:42.6381 5103/T1 age/Cor/CoreMain.cpp:1147 ]: Checking whether to disconnect long-running connections for process 5190, application /home/egor/Рабочий стол/PROJECT/th (development)
+[ E 2022-01-12 03:34:42.9609 5103/T1 age/Cor/TelemetryCollector.h:455 ]: Error contacting anonymous telemetry server: Failed to connect to anontelemetry.phusionpassenger.com port 443: Connection refused
+[ N 2022-01-12 03:34:43.0339 5103/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :services
+  resources :rents do
+    member {get :more}
+  end
   devise_for :users
   get 'home/index'
   root to: "home#index"

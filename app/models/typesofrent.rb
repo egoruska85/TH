@@ -1,0 +1,2 @@
+class Typesofrent < ApplicationRecord
+end

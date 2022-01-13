@@ -1,0 +1,42 @@
+<center>
+<% if params[:id] == '1' %>
+  <h1><%= t('rent.car')%></h1>
+<% elsif params[:id] == '2' %>
+  <h1><%= t('rent.teh')%></h1>
+<% elsif params[:id] == '3' %>
+  <h1><%= t('rent.mat')%></h1>
+<% end %>
+</center>
+
+
+<h1></h1>
+<center>
+<%= link_to new_rent_path do %>
+  Добавить аренду
+<% end %>
+</center>
+<% if params[:id] == '1' %>
+  <% @rents1.each do |rent| %>
+    <%= image_tag(rent.image) %>
+    <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
+    <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+    <h5><%= rent.title_ru %></h5>
+  <% end %>
+<% elsif params[:id] == '2' %>
+<% @rents2.each do |rent| %>
+  <%= image_tag(rent.image) %>
+  <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+  <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
+  <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+  <h5><%= rent.title_ru %></h5>
+<% end %>
+<% elsif params[:id] == '3' %>
+<% @rents3.each do |rent| %>
+  <%= image_tag(rent.image) %>
+  <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+  <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
+  <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+  <h5><%= rent.title_ru %></h5>
+<% end %>
+<% end %>

@@ -30,17 +30,27 @@
 </div>
 
 
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '2' %>
+      <% @stf.each do |sale| %>
+        <div class="col">
+          <% if sale.image.attached? %>
+            <%= image_tag(sale.image, style:'width:150px; height: 100px')%>
+          <% else %>
+            <%= image_tag(@no, style:'width:150px; height: 100px') %>
+          <% end %>
+          <h6>
+            <%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= sale.title_ru if params[:locale] == 'ru' %>
+            <%= sale.title_tm if params[:locale] == 'tm' %>
+          </h6>
+          <%= link_to 'Подробнее', [:more, sale] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+          <%= link_to 'Подробнее', [:more, sale] if params[:locale] == 'ru' %>
+          <%= link_to 'has giňişleýin maglumat', [:more, sale] if params[:locale] == 'tm' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 
-  <% if params[:id] == '2' %>
-    <% @stf.each do |sale| %>
-    <% if sale.image.attached? %>
-      <%= image_tag(sale.image)%>
-    <% else %>
-      <%= image_tag(@no) %>
-    <% end %>
-      <%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %><%= link_to 'Подробнее', [:more, sale] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-      <%= sale.title_ru if params[:locale] == 'ru' %><%= link_to 'Подробнее', [:more, sale] if params[:locale] == 'ru' %>
-      <%= sale.title_tm if params[:locale] == 'tm' %><%= link_to 'has giňişleýin maglumat', [:more, sale] if params[:locale] == 'tm' %>
-      <hr>
-    <% end %>
-  <% end %>
+</div>

@@ -1,0 +1,15 @@
+<h1>
+<%= @rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @rent.title_ru if params[:locale] == 'ru' %>
+<%= @rent.title_tm if params[:locale] == 'tm' %>
+</h1>
+<% if @rent.image.attached? %>
+  <%= image_tag(@rent.image)%>
+<% else %>
+  <%= image_tag(@no) %>
+<% end %>
+<hr>
+<%= @rent.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @rent.text_ru if params[:locale] == 'ru' %>
+<%= @rent.text_tm if params[:locale] == 'tm' %>
+<%= @rent.year %>

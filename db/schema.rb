@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_085533) do
+ActiveRecord::Schema.define(version: 2022_01_13_070951) do
 
   create_table "aboutimages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -56,6 +56,11 @@ ActiveRecord::Schema.define(version: 2022_01_10_085533) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "dealdones", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "logos", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -91,6 +96,27 @@ ActiveRecord::Schema.define(version: 2022_01_10_085533) do
     t.string "name_en"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rents", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_tm"
+    t.string "title_en"
+    t.text "text_ru"
+    t.text "text_tm"
+    t.text "text_en"
+    t.integer "region_id", null: false
+    t.string "year"
+    t.integer "typesofrent_id", null: false
+    t.string "phone"
+    t.string "price"
+    t.string "email"
+    t.boolean "public"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "search"
+    t.index ["region_id"], name: "index_rents_on_region_id"
+    t.index ["typesofrent_id"], name: "index_rents_on_typesofrent_id"
   end
 
   create_table "sales", force: :cascade do |t|
@@ -131,6 +157,14 @@ ActiveRecord::Schema.define(version: 2022_01_10_085533) do
     t.string "name_en"
   end
 
+  create_table "typesofrents", force: :cascade do |t|
+    t.string "name"
+    t.string "name_tm"
+    t.string "name_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.boolean "admin"
     t.string "email", default: "", null: false
@@ -148,6 +182,8 @@ ActiveRecord::Schema.define(version: 2022_01_10_085533) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "purchases", "regions"
   add_foreign_key "purchases", "types"
+  add_foreign_key "rents", "regions"
+  add_foreign_key "rents", "typesofrents"
   add_foreign_key "sales", "regions"
   add_foreign_key "sales", "types"
 end

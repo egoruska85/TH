@@ -26,7 +26,7 @@ def params_variable
     @aboutimage = image.image
 
   end
-
+  @typesofrent = Typesofrent.all
   @types = Type.all
   @logos = Logo.all
   @logos.each do |logo|
@@ -38,6 +38,10 @@ def params_variable
   @stf = @salesteh.where(sales: false)
   @purchasesauto = Purchase.where(type_id: '1')
   @purchasesteh = Purchase.where(type_id: '2')
+  @dealdones = Dealdone.all
+  @dealdones.each do |image|
+    @dealdone = image.image
+  end
   @time = Time.now
 end
 

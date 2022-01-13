@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_ru: MyString
+  title_tm: MyString
+  title_en: MyString
+  text_ru: MyText
+  text_tm: MyText
+  text_en: MyText
+  region: one
+  year: MyString
+  typesofrent: one
+  phone: MyString
+  price: MyString
+  email: MyString
+  public: false
+
+two:
+  title_ru: MyString
+  title_tm: MyString
+  title_en: MyString
+  text_ru: MyText
+  text_tm: MyText
+  text_en: MyText
+  region: two
+  year: MyString
+  typesofrent: two
+  phone: MyString
+  price: MyString
+  email: MyString
+  public: false

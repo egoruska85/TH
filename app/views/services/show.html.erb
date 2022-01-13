@@ -5,7 +5,7 @@
       <%= image_tag(@service.image, style:'width: 100%') %>
     </div>
     <div class="col-6">
-      <%= @service.text_ru %>
+      <%= simple_format @service.text_ru, style:'font-size: 13px' %>
     </div>
   </div>
 </div>

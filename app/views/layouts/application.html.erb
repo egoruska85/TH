@@ -6,6 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= favicon_link_tag asset_path('/images/logoth.png') %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -22,6 +24,7 @@
     <script type="text/javascript" src="/js/tab.js">
 
 </script>
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
@@ -93,13 +96,13 @@
                 <li>
                   <!--<a href="#home-section" class="nav-link">Главная</a>-->
                   <%= link_to root_path do %>
-                    Главная
+                    <%= t('navbar.main')%>
                   <% end %>
                 </li>
                 <li>
                   <!--<a href="#services-section" class="nav-link">Услуги</a>-->
                   <%= link_to services_path do %>
-                    Услуги
+                    <%= t('navbar.services') %>
                   <% end %>
                 </li>
                 <!--<li class="has-children">
@@ -119,28 +122,32 @@
                   </ul>
                 </li>-->
                 <li class="has-children">
-                  <a href="#about-section" class="nav-link">Коммиссионые услуги</a>
+                  <a href="#about-section" class="nav-link"><%= t('navbar.comm_services')%></a>
 
                   <ul class="dropdown arrow-top">
                     <li class="has-children">
-                      <a href="#">ПРОДАЖА</a>
+                      <a href="#"><%= t('navbar.sale')%></a>
                       <ul class="dropdown">
                           <% @types.each do |type| %>
                           <li>
                             <%= link_to sale_path(type) do %>
-                              <%= type.name %>
+                            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                            <%= type.name if params[:locale] == 'ru' %>
+                            <%= type.name_tm if params[:locale] == 'tm' %>
                             <% end %>
                           </li>
                         <% end %>
                       </ul>
                     </li>
                     <li class="has-children">
-                      <a href="#">ПОКУПКА</a>
+                      <a href="#"><%= t('navbar.purchase')%></a>
                       <ul class="dropdown">
                           <% @types.each do |type| %>
                           <li>
                             <%= link_to purchase_path(type) do %>
-                              <%= type.name %>
+                              <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                              <%= type.name if params[:locale] == 'ru' %>
+                              <%= type.name_tm if params[:locale] == 'tm' %>
                             <% end %>
                           </li>
                         <% end %>
@@ -165,18 +172,53 @@
                   </ul>
                 </li>
                 <li class="has-children">
-                  <a href="#about-section" class="nav-link">Аренда</a>
+                  <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
                   <ul class="dropdown arrow-top">
-                    <li><a href="#team-section" class="nav-link">Сроительная техника</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Дорожная техника</a></li>
 
 
+
+                    <% @typesofrent.each do |type| %>
+                    <li>
+                      <%= link_to rent_path(type) do %>
+                        <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                        <%= type.name if params[:locale] == 'ru' %>
+                        <%= type.name_tm if params[:locale] == 'tm' %>
+                      <% end %>
+
+
+                    </li>
+
+
+                    <% end %>
                   </ul>
                 </li>
+                <li class="has-children">
+                  <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
+                  <ul class="dropdown arrow-top">
 
+
+
+                    <% @typesofrent.each do |type| %>
+                    <li>
+                      <%= link_to rent_path(type) do %>
+                        <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                        <%= type.name if params[:locale] == 'ru' %>
+                        <%= type.name_tm if params[:locale] == 'tm' %>
+                      <% end %>
+
+
+                    </li>
+
+
+                    <% end %>
+                  </ul>
+                </li>
                 <li><!--<a href="#press-section" class="nav-link">О нас</a>-->
-                <%= link_to root_path + '#p1' do %>
-                  О нас
+
+                  <%= link_to root_path + '#p1' do %>
+
+
+                  <%= t('navbar.about')%>
                 <% end %>
                 </li>
               </ul>
@@ -206,7 +248,7 @@
 
 
     <%= yield %>
-
+<div>
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -268,8 +310,8 @@
 
   </div>
 
-  <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/popper.min.js"></script>
+  <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/owl.carousel.min.js"></script>
   <script src="/js/jquery.sticky.js"></script>

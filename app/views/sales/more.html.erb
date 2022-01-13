@@ -1,15 +1,64 @@
-<h1>
-<%= @sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-<%= @sale.title_ru if params[:locale] == 'ru' %>
-<%= @sale.title_tm if params[:locale] == 'tm' %>
-</h1>
-<% if @sale.image.attached? %>
-  <%= image_tag(@sale.image)%>
-<% else %>
-  <%= image_tag(@no) %>
-<% end %>
-<hr>
-<%= @sale.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-<%= @sale.text_ru if params[:locale] == 'ru' %>
-<%= @sale.text_tm if params[:locale] == 'tm' %>
-<%= @sale.year %>
+<style media="screen">
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+
+  <% if @sale != nil %>
+    <div class="container">
+    <h1>
+    <%= @sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @sale.title_ru if params[:locale] == 'ru' %>
+    <%= @sale.title_tm if params[:locale] == 'tm' %>
+    </h1>
+    <% if @sale.image.attached? %>
+      <%= image_tag(@sale.image)%>
+    <% else %>
+      <%= image_tag(@no) %>
+    <% end %>
+    <hr>
+    <%= @sale.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @sale.text_ru if params[:locale] == 'ru' %>
+    <%= @sale.text_tm if params[:locale] == 'tm' %>
+    <%= @sale.year %>
+    <hr>
+    <%= t('sales.price')%><div><%= @sale.price %></div>
+    <hr>
+      <%= t('sales.phones')%><div><a href="tel:<%= @sale.phone %>"><%= @sale.phone %></a></div>
+    <hr>
+      E-mail:
+    <div>
+      <%= mail_to @sale.email %>
+    </div>
+    <hr>
+    <%= check_box_tag 'admin', '1', @sale.cashless, :disabled => true %><%= t('sales.cashless') %>
+    <hr>
+    <%= @region.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @region.name if params[:locale] == 'ru' %>
+    <%= @region.name_tm if params[:locale] == 'tm' %>
+    <hr>
+    <% @sale.images.each do |image|%>
+      <%= image_tag(image)%>
+    <% end %>
+    </div>
+    <% elsif %>
+    <div class="parallax">
+      <%= image_tag(@dealdone, style:'width: 100%; opacity:.2;') %>
+      <center>
+      <div class="centered">
+
+        <%= t('sale.sales')%>
+
+        <%= link_to root_path, class:'btn btn-light' do %>
+          <%= t('sale.sales_back')%>
+
+      </div>
+      </center>
+      <% end %>
+  <% end %>
+  </div>
+<br>

@@ -13,5 +13,12 @@ class SalesController < ApplicationController
       @no = nophoto.image
     end
     @sale = Sale.find(params[:id])
+    @regions = Region.where(id: @sale.region_id)
+    @regions.each do |region|
+      @region = region
+    end
+    if @sale.sales == true
+      @sale = nil
+    end
   end
 end
