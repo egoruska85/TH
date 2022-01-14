@@ -15,7 +15,11 @@ class RentsController < ApplicationController
       @no = nophoto.image
     end
     @rent = Rent.find(params[:id])
-    
+    @regions = Region.where(id: @rent.region_id)
+    @regions.each do |region|
+      @region = region
+    end
+
   end
   def new
 

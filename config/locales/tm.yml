@@ -12,10 +12,16 @@ tm:
     purchase: "SATYN ALMAK"
     rent: "Kärenda"
     about: "Biž barada"
+    search: "Gözlemek"
+    rents: "Jümle"
   sale:
     sales: "SATYŞ"
     sales_back: "BAŞ SAHYPA"
   rent:
-    car: "Kärenda awtoulag"
-    teh: "Kärenda gurluşyk tehnikasy"
-    mat: "Kärenda gurluşyk harytlary"
+    car: "Awtoulag kärendesi teklibi"
+    teh: "Gurluşyk enjamlaryny kärendesine almak, teklip"
+    mat: "Gurluşyk materiallaryny kärendesine almak, teklip"
+  search:
+    car: "Awtoulag kärendesi, gözleg"
+    teh: "Gurluşyk enjamlaryny kärendesine almak, gözlemek"
+    mat: "Gurluşyk materiallaryny kärendesine almak, gözlemek"

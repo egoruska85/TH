@@ -15,28 +15,83 @@
   Добавить аренду
 <% end %>
 </center>
-<% if params[:id] == '1' %>
-  <% @rents1.each do |rent| %>
-    <%= image_tag(rent.image) %>
-    <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-    <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
-    <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
-    <h5><%= rent.title_ru %></h5>
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '1' %>
+      <% @rents1.each do |rent| %>
+    <div class="col">
+      <% if rent.image.attached? %>
+        <%= image_tag(rent.image, style:'width:150px; height: 100px')%>
+      <% else %>
+        <%= image_tag(@no, style:'width:150px; height: 100px') %>
+      <% end %>
+      <h6>
+        <%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+        <%= rent.title_ru if params[:locale] == 'ru' %>
+        <%= rent.title_tm if params[:locale] == 'tm' %>
+      </h6>
+      <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+      <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
+      <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+    </div>
+    <% end %>
   <% end %>
-<% elsif params[:id] == '2' %>
-<% @rents2.each do |rent| %>
-  <%= image_tag(rent.image) %>
-  <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-  <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
-  <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
-  <h5><%= rent.title_ru %></h5>
-<% end %>
-<% elsif params[:id] == '3' %>
-<% @rents3.each do |rent| %>
-  <%= image_tag(rent.image) %>
-  <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-  <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
-  <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
-  <h5><%= rent.title_ru %></h5>
-<% end %>
-<% end %>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '2' %>
+      <% @rents2.each do |rent| %>
+        <div class="col">
+          <% if rent.image.attached? %>
+            <%= image_tag(rent.image, style:'width:150px; height: 100px')%>
+          <% else %>
+            <%= image_tag(@no, style:'width:150px; height: 100px') %>
+          <% end %>
+          <h6>
+            <%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= rent.title_ru if params[:locale] == 'ru' %>
+            <%= rent.title_tm if params[:locale] == 'tm' %>
+          </h6>
+          <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+          <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
+          <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '3' %>
+      <% @rents3.each do |rent| %>
+        <div class="col">
+          <% if rent.image.attached? %>
+            <%= image_tag(rent.image, style:'width:150px; height: 100px')%>
+          <% else %>
+            <%= image_tag(@no, style:'width:150px; height: 100px') %>
+          <% end %>
+          <h6>
+            <%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= rent.title_ru if params[:locale] == 'ru' %>
+            <%= rent.title_tm if params[:locale] == 'tm' %>
+          </h6>
+          <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+          <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
+          <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

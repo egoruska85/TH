@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_13_070951) do
+ActiveRecord::Schema.define(version: 2022_01_14_194256) do
 
   create_table "aboutimages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 2022_01_13_070951) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "search"
+    t.boolean "cashless"
     t.index ["region_id"], name: "index_rents_on_region_id"
     t.index ["typesofrent_id"], name: "index_rents_on_typesofrent_id"
   end
@@ -136,6 +137,27 @@ ActiveRecord::Schema.define(version: 2022_01_13_070951) do
     t.integer "region_id"
     t.index ["region_id"], name: "index_sales_on_region_id"
     t.index ["type_id"], name: "index_sales_on_type_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_tm"
+    t.string "title_en"
+    t.text "text_ru"
+    t.text "text_tm"
+    t.text "text_en"
+    t.integer "region_id", null: false
+    t.string "year"
+    t.integer "typesofrent_id", null: false
+    t.string "phone"
+    t.string "price"
+    t.string "email"
+    t.boolean "public"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "cashless"
+    t.index ["region_id"], name: "index_searches_on_region_id"
+    t.index ["typesofrent_id"], name: "index_searches_on_typesofrent_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -186,4 +208,6 @@ ActiveRecord::Schema.define(version: 2022_01_13_070951) do
   add_foreign_key "rents", "typesofrents"
   add_foreign_key "sales", "regions"
   add_foreign_key "sales", "types"
+  add_foreign_key "searches", "regions"
+  add_foreign_key "searches", "typesofrents"
 end

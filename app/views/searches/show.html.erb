@@ -1,0 +1,91 @@
+<center>
+<% if params[:id] == '1' %>
+  <h1><%= t('search.car')%></h1>
+<% elsif params[:id] == '2' %>
+  <h1><%= t('search.teh')%></h1>
+<% elsif params[:id] == '3' %>
+  <h1><%= t('search.mat')%></h1>
+<% end %>
+</center>
+
+
+<h1></h1>
+<center>
+<%= link_to new_search_path do %>
+  Добавить аренду
+<% end %>
+</center>
+
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '1' %>
+      <% @searches1.each do |search| %>
+    <div class="col">
+      <% if search.image.attached? %>
+        <%= image_tag(search.image, style:'width:150px; height: 100px')%>
+      <% else %>
+        <%= image_tag(@no, style:'width:150px; height: 100px') %>
+      <% end %>
+      <h6>
+        <%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+        <%= search.title_ru if params[:locale] == 'ru' %>
+        <%= search.title_tm if params[:locale] == 'tm' %>
+      </h6>
+      <%= link_to 'Подробнее', [:more, search] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+      <%= link_to 'Подробнее', [:more, search] if params[:locale] == 'ru' %>
+      <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '2' %>
+      <% @searches2.each do |search| %>
+        <div class="col">
+          <% if search.image.attached? %>
+            <%= image_tag(search.image, style:'width:150px; height: 100px')%>
+          <% else %>
+            <%= image_tag(@no, style:'width:150px; height: 100px') %>
+          <% end %>
+          <h6>
+            <%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= search.title_ru if params[:locale] == 'ru' %>
+            <%= search.title_tm if params[:locale] == 'tm' %>
+          </h6>
+          <%= link_to 'Подробнее', [:more, search] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+          <%= link_to 'Подробнее', [:more, search] if params[:locale] == 'ru' %>
+          <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>
+<div class="container">
+  <div class="row">
+    <% if params[:id] == '3' %>
+      <% @searches3.each do |search| %>
+        <div class="col">
+          <% if search.image.attached? %>
+            <%= image_tag(search.image, style:'width:150px; height: 100px')%>
+          <% else %>
+            <%= image_tag(@no, style:'width:150px; height: 100px') %>
+          <% end %>
+          <h6>
+            <%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= search.title_ru if params[:locale] == 'ru' %>
+            <%= search.title_tm if params[:locale] == 'tm' %>
+          </h6>
+          <%= link_to 'Подробнее', [:more, search] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+          <%= link_to 'Подробнее', [:more, search] if params[:locale] == 'ru' %>
+          <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>

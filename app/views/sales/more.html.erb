@@ -24,6 +24,7 @@
     <%= @sale.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
     <%= @sale.text_ru if params[:locale] == 'ru' %>
     <%= @sale.text_tm if params[:locale] == 'tm' %>
+    <hr>
     <%= @sale.year %>
     <hr>
     <%= t('sales.price')%><div><%= @sale.price %></div>
@@ -45,7 +46,7 @@
       <%= image_tag(image)%>
     <% end %>
     </div>
-    <% elsif %>
+    <% else %>
     <div class="parallax">
       <%= image_tag(@dealdone, style:'width: 100%; opacity:.2;') %>
       <center>

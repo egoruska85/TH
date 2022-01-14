@@ -77,7 +77,7 @@
 
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
-      <div class="container-fluid">
+      <div class="container">
         <div class="row align-items-center position-relative">
 
 
@@ -99,28 +99,8 @@
                     <%= t('navbar.main')%>
                   <% end %>
                 </li>
-                <li>
-                  <!--<a href="#services-section" class="nav-link">Услуги</a>-->
-                  <%= link_to services_path do %>
-                    <%= t('navbar.services') %>
-                  <% end %>
-                </li>
-                <!--<li class="has-children">
-                  <a href="#about-section" class="nav-link">Аренда</a>
-                  <ul class="dropdown arrow-top">
-                    <li><a href="#team-section" class="nav-link">Сроительная техника</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Дорожная техника</a></li>
-                    <li><a href="#faq-section" class="nav-link">Резиновые хуи</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>-->
+
+
                 <li class="has-children">
                   <a href="#about-section" class="nav-link"><%= t('navbar.comm_services')%></a>
 
@@ -153,65 +133,47 @@
                         <% end %>
                       </ul>
                     </li>
-
-
-                    <!--<% @types.each do |type| %>
-                      <li>
-                        <%= link_to sale_path(type) do %>
-                          <%= type.name %>
-                        <% end %>
-                      </li>
-                    <% end %>
-                    <% @types.each do |type| %>
-                      <li>
-                        <%= link_to purchase_path(type) do %>
-                          <%= type.name %>
-                        <% end %>
-                      </li>
-                    <% end %>-->
                   </ul>
                 </li>
                 <li class="has-children">
-                  <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
+                  <a href="#about-section" class="nav-link"><%= t('navbar.rent')%></a>
+
                   <ul class="dropdown arrow-top">
-
-
-
-                    <% @typesofrent.each do |type| %>
-                    <li>
-                      <%= link_to rent_path(type) do %>
-                        <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
-                        <%= type.name if params[:locale] == 'ru' %>
-                        <%= type.name_tm if params[:locale] == 'tm' %>
-                      <% end %>
-
-
+                    <li class="has-children">
+                      <a href="#"><%= t('navbar.rents')%></a>
+                      <ul class="dropdown">
+                          <% @typesofrent.each do |type| %>
+                          <li>
+                            <%= link_to rent_path(type) do %>
+                            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                            <%= type.name if params[:locale] == 'ru' %>
+                            <%= type.name_tm if params[:locale] == 'tm' %>
+                            <% end %>
+                          </li>
+                        <% end %>
+                      </ul>
                     </li>
-
-
-                    <% end %>
+                    <li class="has-children">
+                      <a href="#"><%= t('navbar.search')%></a>
+                      <ul class="dropdown">
+                          <% @typesofrent.each do |type| %>
+                          <li>
+                            <%= link_to search_path(type) do %>
+                              <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                              <%= type.name if params[:locale] == 'ru' %>
+                              <%= type.name_tm if params[:locale] == 'tm' %>
+                            <% end %>
+                          </li>
+                        <% end %>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
-                <li class="has-children">
-                  <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
-                  <ul class="dropdown arrow-top">
-
-
-
-                    <% @typesofrent.each do |type| %>
-                    <li>
-                      <%= link_to rent_path(type) do %>
-                        <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
-                        <%= type.name if params[:locale] == 'ru' %>
-                        <%= type.name_tm if params[:locale] == 'tm' %>
-                      <% end %>
-
-
-                    </li>
-
-
-                    <% end %>
-                  </ul>
+                <li>
+                  <!--<a href="#services-section" class="nav-link">Услуги</a>-->
+                  <%= link_to services_path do %>
+                    <%= t('navbar.services') %>
+                  <% end %>
                 </li>
                 <li><!--<a href="#press-section" class="nav-link">О нас</a>-->
 
@@ -232,9 +194,50 @@
       </div>
 
     </header>
+    <!--<li class="has-children">
+      <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
+      <ul class="dropdown arrow-top">
 
 
 
+        <% @typesofrent.each do |type| %>
+        <li>
+          <%= link_to rent_path(type) do %>
+            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+            <%= type.name if params[:locale] == 'ru' %>
+            <%= type.name_tm if params[:locale] == 'tm' %>
+          <% end %>
+
+
+        </li>
+
+
+        <% end %>
+      </ul>
+    </li>
+
+
+    <li class="has-children">
+      <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
+      <ul class="dropdown arrow-top">
+
+
+
+        <% @typesofrent.each do |type| %>
+        <li>
+          <%= link_to search_path(type) do %>
+            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+            <%= type.name if params[:locale] == 'ru' %>
+            <%= type.name_tm if params[:locale] == 'tm' %>
+          <% end %>
+
+
+        </li>
+
+
+        <% end %>
+      </ul>
+    </li>-->
 
 
 

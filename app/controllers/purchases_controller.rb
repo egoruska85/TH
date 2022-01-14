@@ -7,6 +7,11 @@ class PurchasesController < ApplicationController
     end
   end
   def more
+    @nophoto = Nophoto.all
+
+    @nophoto.each do |nophoto|
+      @no = nophoto.image
+    end
     @purchase = Purchase.find(params[:id])
     @regions = Region.where(id: @purchase.region_id)
     @regions.each do |region|

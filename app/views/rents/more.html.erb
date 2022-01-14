@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+<div class="container">
 <h1>
 <%= @rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
 <%= @rent.title_ru if params[:locale] == 'ru' %>
@@ -12,4 +23,25 @@
 <%= @rent.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
 <%= @rent.text_ru if params[:locale] == 'ru' %>
 <%= @rent.text_tm if params[:locale] == 'tm' %>
+<hr>
 <%= @rent.year %>
+<hr>
+<%= t('sales.price')%><div><%= @rent.price %></div>
+<hr>
+  <%= t('sales.phones')%><div><a href="tel:<%= @rent.phone %>"><%= @rent.phone %></a></div>
+<hr>
+  E-mail:
+<div>
+  <%= mail_to @rent.email %>
+</div>
+<hr>
+<%= check_box_tag 'admin', '1', @rent.cashless, :disabled => true %><%= t('sales.cashless') %>
+<hr>
+<%= @region.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @region.name if params[:locale] == 'ru' %>
+<%= @region.name_tm if params[:locale] == 'tm' %>
+<hr>
+<% @rent.images.each do |image|%>
+  <%= image_tag(image)%>
+<% end %>
+</div>
