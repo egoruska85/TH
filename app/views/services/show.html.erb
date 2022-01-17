@@ -1,11 +1,16 @@
-<div class="container">
-  <center><h1><%= @service.name_ru %></h1></center>
-  <div class="row">
-    <div class="col-6">
-      <%= image_tag(@service.image, style:'width: 100%') %>
-    </div>
-    <div class="col-6">
-      <%= simple_format @service.text_ru, style:'font-size: 13px' %>
+<div class="site-section">
+  <div class="block__73694 mb-2" id="services-section">
+    <div class="container">
+      <div class="row d-flex no-gutters align-items-stretch">
+        <div class="col-12 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+          <%= image_tag(@service.image, style:'width: 100%') %>
+        </div>
+        <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+          <h2 class="mb-3 text-black"><%= @service.name_ru %></h2>
+          <p><%= simple_format @service.text_ru, style:'font-size: 13px' %></p>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>

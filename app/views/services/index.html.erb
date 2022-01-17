@@ -1,26 +1,20 @@
-<div class="container-fluid">
-  <p style="font-size: 50px;" align="center" ><%= t('services').capitalize %></p>
-
-
-    <div class="container">
-      <div class="row">
-        <% @services.each do |service| %>
-          <div class="col-6">
-            <center>
-              <h4><%= service.name_ru %></h4>
-              <%= image_tag(service.image, style:'width: 50%') %>
-            </center>
-              <%= simple_format service.text_ru.length <= 200 ? service.text_ru : service.text_ru[0..200] + '.....', style:'font-size: 13px'  %>
-              <%= link_to service_path(service) do %>
-                Подробнее
-              <% end %>
+<% @services.each do |service| %>
+  <div class="site-section">
+    <div class="block__73694 mb-2" id="services-section">
+      <div class="container">
+        <div class="row d-flex no-gutters align-items-stretch">
+          <div class="col-12 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <%= image_tag(service.image, style:'width: 50%') %>
           </div>
-
-
-        <% end %>
+          <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+            <h2 class="mb-3 text-black"><%= service.name_ru %></h2>
+            <p><%= simple_format service.text_ru.length <= 300 ? service.text_ru : service.text_ru[0..300] + '...' %></p>
+            <%= link_to service_path(service) do %>
+              Подробнее
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-
-
-
-</div>
+  </div>
+<% end %>
