@@ -1,3 +1,4 @@
+<center style="font-size: 40px"><%= t('services').capitalize %></center>
 <% @services.each do |service| %>
   <div class="site-section">
     <div class="block__73694 mb-2" id="services-section">
@@ -7,8 +8,12 @@
             <%= image_tag(service.image, style:'width: 50%') %>
           </div>
           <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-            <h2 class="mb-3 text-black"><%= service.name_ru %></h2>
-            <p><%= simple_format service.text_ru.length <= 300 ? service.text_ru : service.text_ru[0..300] + '...' %></p>
+            <h2 class="mb-3 text-black"><%= service.name_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+            <h2 class="mb-3 text-black"><%= service.name_ru if params[:locale] == 'ru' %></h2>
+            <h2 class="mb-3 text-black"><%= service.name_tm if params[:locale] == 'tm' %></h2>
+            <p><%= simple_format service.text_ru.length <= 300 ? service.text_ru : service.text_ru[0..300] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+            <p><%= simple_format service.text_ru.length <= 300 ? service.text_ru : service.text_ru[0..300] + '...' if params[:locale] == 'ru' %></p>
+            <p><%= simple_format service.text_tm.length <= 300 ? service.text_tm : service.text_tm[0..300] + '...' if params[:locale] == 'tm' %></p>
             <%= link_to service_path(service) do %>
               Подробнее
             <% end %>

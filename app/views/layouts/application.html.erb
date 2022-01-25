@@ -90,16 +90,24 @@
             </div>
 
             <div class="col-12">
-              <nav class="site-navigation text-right ml-auto " role="navigation">
+              <nav class="site-navigation text-right ml-auto " role="navigation" style="font-size: 11px">
 
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li>
-                  <!--<a href="#home-section" class="nav-link">Главная</a>-->
+
                   <%= link_to root_path do %>
                     <%= t('navbar.main')%>
                   <% end %>
                 </li>
-
+                <li>
+                  <% @service_link.each do |link| %>
+                    <%= link_to service_path(link) do %>
+                      <%= link.name_ru.capitalize if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                      <%= link.name_ru.capitalize if params[:locale] == 'ru' %>
+                      <%= link.name_tm.capitalize if params[:locale] == 'tm' %>
+                    <% end %>
+                  <% end %>
+                </li>
 
                 <li class="has-children">
                   <a href="#about-section" class="nav-link"><%= t('navbar.comm_services')%></a>
@@ -111,7 +119,7 @@
                           <% @types.each do |type| %>
                           <li>
                             <%= link_to sale_path(type) do %>
-                            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+                            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
                             <%= type.name if params[:locale] == 'ru' %>
                             <%= type.name_tm if params[:locale] == 'tm' %>
                             <% end %>
@@ -136,7 +144,7 @@
                   </ul>
                 </li>
                 <li class="has-children">
-                  <a href="#about-section" class="nav-link"><%= t('navbar.rent')%></a>
+                  <a href="#about-section" class="nav-link"><%= t('navbar.rent').capitalize %></a>
 
                   <ul class="dropdown arrow-top">
                     <li class="has-children">
@@ -194,50 +202,6 @@
       </div>
 
     </header>
-    <!--<li class="has-children">
-      <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
-      <ul class="dropdown arrow-top">
-
-
-
-        <% @typesofrent.each do |type| %>
-        <li>
-          <%= link_to rent_path(type) do %>
-            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
-            <%= type.name if params[:locale] == 'ru' %>
-            <%= type.name_tm if params[:locale] == 'tm' %>
-          <% end %>
-
-
-        </li>
-
-
-        <% end %>
-      </ul>
-    </li>
-
-
-    <li class="has-children">
-      <a href="#about-section" class="nav-link"><%= t('navbar.rent') %></a>
-      <ul class="dropdown arrow-top">
-
-
-
-        <% @typesofrent.each do |type| %>
-        <li>
-          <%= link_to search_path(type) do %>
-            <%= type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
-            <%= type.name if params[:locale] == 'ru' %>
-            <%= type.name_tm if params[:locale] == 'tm' %>
-          <% end %>
-
-
-        </li>
-
-
-        <% end %>
-      </ul>
-    </li>-->
 
 
 

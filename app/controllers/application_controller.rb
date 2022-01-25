@@ -43,6 +43,7 @@ def params_variable
     @dealdone = image.image
   end
   @time = Time.now
+  @service_link = Service.where(name_ru: 'СМЕТНЫЙ АУТСОРСИНГ')
 end
 
 end
