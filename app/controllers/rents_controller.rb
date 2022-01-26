@@ -4,9 +4,8 @@ class RentsController < ApplicationController
   end
   def show
     @rents = Rent.where(public: true)
-    @rents1 = @rents.where(typesofrent_id: '1')
-    @rents2 = @rents.where(typesofrent_id: '2')
-    @rents3 = @rents.where(typesofrent_id: '3')
+    @rents1 = @rents.where(typesofrent_id: params[:id])
+
   end
   def more
     @nophoto = Nophoto.all

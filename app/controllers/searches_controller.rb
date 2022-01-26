@@ -4,9 +4,9 @@ class SearchesController < ApplicationController
   end
   def show
     @searches = Search.where(public: true)
-    @searches1 = @searches.where(typesofrent_id: '1')
-    @searches2 = @searches.where(typesofrent_id: '2')
-    @searches3 = @searches.where(typesofrent_id: '3')
+    @searches1 = @searches.where(typesofrent_id: params[:id])
+    #@searches2 = @searches.where(typesofrent_id: '2')
+    #@searches3 = @searches.where(typesofrent_id: '3')
   end
   def more
     @nophoto = Nophoto.all

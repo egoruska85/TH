@@ -18,7 +18,7 @@
 
 <div class="container">
   <div class="row">
-    <% if params[:id] == '1' %>
+
       <% @searches1.each do |search| %>
     <div class="col">
       <% if search.image.attached? %>
@@ -36,56 +36,6 @@
       <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
     </div>
     <% end %>
-  <% end %>
+
   </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    <% if params[:id] == '2' %>
-      <% @searches2.each do |search| %>
-        <div class="col">
-          <% if search.image.attached? %>
-            <%= image_tag(search.image, style:'width:150px; height: 100px')%>
-          <% else %>
-            <%= image_tag(@no, style:'width:150px; height: 100px') %>
-          <% end %>
-          <h6>
-            <%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-            <%= search.title_ru if params[:locale] == 'ru' %>
-            <%= search.title_tm if params[:locale] == 'tm' %>
-          </h6>
-          <%= link_to 'Подробнее', [:more, search] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-          <%= link_to 'Подробнее', [:more, search] if params[:locale] == 'ru' %>
-          <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-
-</div>
-<div class="container">
-  <div class="row">
-    <% if params[:id] == '3' %>
-      <% @searches3.each do |search| %>
-        <div class="col">
-          <% if search.image.attached? %>
-            <%= image_tag(search.image, style:'width:150px; height: 100px')%>
-          <% else %>
-            <%= image_tag(@no, style:'width:150px; height: 100px') %>
-          <% end %>
-          <h6>
-            <%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-            <%= search.title_ru if params[:locale] == 'ru' %>
-            <%= search.title_tm if params[:locale] == 'tm' %>
-          </h6>
-          <%= link_to 'Подробнее', [:more, search] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-          <%= link_to 'Подробнее', [:more, search] if params[:locale] == 'ru' %>
-          <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-
 </div>
