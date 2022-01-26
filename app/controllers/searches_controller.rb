@@ -3,6 +3,15 @@ class SearchesController < ApplicationController
   def index
   end
   def show
+    @keys = Key.all
+    @keys.each do |key|
+      if key.key != @activation
+
+          redirect_to '/admin'
+
+
+      end
+    end
     @searches = Search.where(public: true)
     @searches1 = @searches.where(typesofrent_id: params[:id])
     #@searches2 = @searches.where(typesofrent_id: '2')

@@ -23,13 +23,24 @@
       <%= image_tag(@no) %>
     <% end %>
     <hr>
-    <%= @purchase.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-    <%= @purchase.text_ru if params[:locale] == 'ru' %>
-    <%= @purchase.text_tm if params[:locale] == 'tm' %>
+    <%= t('sales.brand')%><div><%= @brand.name %></div>
     <hr>
-    <%= @purchase.year %>
+    <% if @purchase.model_id == nil %>
+      <%= t('sales.model')%><div><%= t('sales.nomodel')%></div>
+    <% else %>
+      <%= t('sales.model')%><div><%= @model.name %></div>
+    <% end %>
+    <hr>
+    <%= t('sales.year')%><div><%= @purchase.year %></div>
     <hr>
     <%= t('sales.price')%><div><%= @purchase.price %></div>
+    <hr>
+    <%= t('sales.about')%>
+    <div>
+      <%= @purchase.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+      <%= @purchase.text_ru if params[:locale] == 'ru' %>
+      <%= @purchase.text_tm if params[:locale] == 'tm' %>
+    </div>
     <hr>
       <%= t('sales.phones')%><div><a href="tel:<%= @purchase.phone %>"><%= @purchase.phone %></a></div>
     <hr>
@@ -54,7 +65,7 @@
       <center>
       <div class="centered">
 
-        <%= t('sale.sales')%>
+        <%= t('purchase.purchase')%>
 
         <%= link_to root_path, class:'btn btn-light' do %>
           <%= t('sale.sales_back')%>

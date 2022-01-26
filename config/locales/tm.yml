@@ -7,7 +7,7 @@ tm:
     brand: "Markasy:"
     model: "Model:"
     year: "Neşir edilen ýyly"
-    about: "Has köp"
+    about: "Has köp:"
     nomodel: "Görkezilmedi"    
   navbar:
     main: "Baş sahypa"

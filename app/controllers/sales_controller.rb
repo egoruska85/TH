@@ -1,5 +1,14 @@
 class SalesController < ApplicationController
   def show
+    @keys = Key.all
+    @keys.each do |key|
+      if key.key != @activation
+
+          redirect_to '/admin'
+
+
+      end
+    end
     @nophoto = Nophoto.all
 
     @nophoto.each do |nophoto|

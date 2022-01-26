@@ -3,6 +3,15 @@ class RentsController < ApplicationController
   def index
   end
   def show
+    @keys = Key.all
+    @keys.each do |key|
+      if key.key != @activation
+
+          redirect_to '/admin'
+
+
+      end
+    end
     @rents = Rent.where(public: true)
     @rents1 = @rents.where(typesofrent_id: params[:id])
 

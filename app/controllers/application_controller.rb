@@ -20,6 +20,7 @@ def default_url_options
 end
 
 def params_variable
+  @activation = '11499-65226-26429-87211'
   @abouts = About.all
   @aboutimages = Aboutimage.all
   @aboutimages.each do |image|
@@ -44,6 +45,7 @@ def params_variable
   end
   @time = Time.now
   @service_link = Service.where(name_ru: 'СМЕТНЫЙ АУТСОРСИНГ')
+
 end
 
 end

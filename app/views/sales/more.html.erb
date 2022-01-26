@@ -25,7 +25,7 @@
     <%= t('sales.brand')%><div><%= @brand.name %></div>
     <hr>
     <% if @sale.model_id == nil %>
-      <%= t('sales.model')%><div><%= t('sales.nomodel')%></div>      
+      <%= t('sales.model')%><div><%= t('sales.nomodel')%></div>
     <% else %>
       <%= t('sales.model')%><div><%= @model.name %></div>
     <% end %>
