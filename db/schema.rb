@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_14_194256) do
+ActiveRecord::Schema.define(version: 2022_01_26_005740) do
 
   create_table "aboutimages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -56,6 +56,12 @@ ActiveRecord::Schema.define(version: 2022_01_14_194256) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "dealdones", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -86,6 +92,8 @@ ActiveRecord::Schema.define(version: 2022_01_14_194256) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "region_id"
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_purchases_on_brand_id"
     t.index ["region_id"], name: "index_purchases_on_region_id"
     t.index ["type_id"], name: "index_purchases_on_type_id"
   end
@@ -116,6 +124,8 @@ ActiveRecord::Schema.define(version: 2022_01_14_194256) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "search"
     t.boolean "cashless"
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_rents_on_brand_id"
     t.index ["region_id"], name: "index_rents_on_region_id"
     t.index ["typesofrent_id"], name: "index_rents_on_typesofrent_id"
   end
@@ -135,6 +145,8 @@ ActiveRecord::Schema.define(version: 2022_01_14_194256) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "region_id"
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_sales_on_brand_id"
     t.index ["region_id"], name: "index_sales_on_region_id"
     t.index ["type_id"], name: "index_sales_on_type_id"
   end
@@ -156,6 +168,8 @@ ActiveRecord::Schema.define(version: 2022_01_14_194256) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "cashless"
+    t.integer "brand_id"
+    t.index ["brand_id"], name: "index_searches_on_brand_id"
     t.index ["region_id"], name: "index_searches_on_region_id"
     t.index ["typesofrent_id"], name: "index_searches_on_typesofrent_id"
   end
@@ -202,12 +216,16 @@ ActiveRecord::Schema.define(version: 2022_01_14_194256) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "purchases", "brands"
   add_foreign_key "purchases", "regions"
   add_foreign_key "purchases", "types"
+  add_foreign_key "rents", "brands"
   add_foreign_key "rents", "regions"
   add_foreign_key "rents", "typesofrents"
+  add_foreign_key "sales", "brands"
   add_foreign_key "sales", "regions"
   add_foreign_key "sales", "types"
+  add_foreign_key "searches", "brands"
   add_foreign_key "searches", "regions"
   add_foreign_key "searches", "typesofrents"
 end

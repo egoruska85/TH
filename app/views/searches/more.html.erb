@@ -1,3 +1,4 @@
+<div class="container">
 <h1>
 <%= @search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
 <%= @search.title_ru if params[:locale] == 'ru' %>
@@ -12,4 +13,25 @@
 <%= @search.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
 <%= @search.text_ru if params[:locale] == 'ru' %>
 <%= @search.text_tm if params[:locale] == 'tm' %>
+<hr>
 <%= @search.year %>
+<hr>
+<%= t('sales.price')%><div><%= @search.price %></div>
+<hr>
+  <%= t('sales.phones')%><div><a href="tel:<%= @search.phone %>"><%= @search.phone %></a></div>
+<hr>
+  E-mail:
+<div>
+  <%= mail_to @search.email %>
+</div>
+<hr>
+<%= check_box_tag 'admin', '1', @search.cashless, :disabled => true %><%= t('sales.cashless') %>
+<hr>
+<%= @region.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+<%= @region.name if params[:locale] == 'ru' %>
+<%= @region.name_tm if params[:locale] == 'tm' %>
+<hr>
+<% @search.images.each do |image|%>
+  <%= image_tag(image)%>
+<% end %>
+</div>
