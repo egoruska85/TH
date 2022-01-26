@@ -4,6 +4,11 @@ ru:
     phones: "Телефоны:"
     price: "Цена:"
     cashless: "Безналично"
+    brand: "Марка:"
+    model: "Модель:"
+    year: "Год выпуска"
+    about: "Подробнее"
+    nomodel: "Не указано"
   navbar:
     main: "Главная"
     services: "Услуги"

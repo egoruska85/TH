@@ -4,6 +4,11 @@ tm:
     phones: "Telefonlar:"
     price: "Bahasy:"
     cashless: "Nagt däl"
+    brand: "Markasy:"
+    model: "Model:"
+    year: "Neşir edilen ýyly"
+    about: "Has köp"
+    nomodel: "Görkezilmedi"    
   navbar:
     main: "Baş sahypa"
     services: "Hyzmatlar"

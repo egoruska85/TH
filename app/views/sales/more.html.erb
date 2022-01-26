@@ -15,21 +15,33 @@
     <%= @sale.title_ru if params[:locale] == 'ru' %>
     <%= @sale.title_tm if params[:locale] == 'tm' %>
     </h1>
+
     <% if @sale.image.attached? %>
       <%= image_tag(@sale.image)%>
     <% else %>
       <%= image_tag(@no) %>
     <% end %>
     <hr>
-    <%= @sale.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-    <%= @sale.text_ru if params[:locale] == 'ru' %>
-    <%= @sale.text_tm if params[:locale] == 'tm' %>
+    <%= t('sales.brand')%><div><%= @brand.name %></div>
     <hr>
-    <%= @sale.year %>
+    <% if @sale.model_id == nil %>
+      <%= t('sales.model')%><div><%= t('sales.nomodel')%></div>      
+    <% else %>
+      <%= t('sales.model')%><div><%= @model.name %></div>
+    <% end %>
+    <hr>
+    <%= t('sales.year')%><div><%= @sale.year %></div>
     <hr>
     <%= t('sales.price')%><div><%= @sale.price %></div>
     <hr>
-      <%= t('sales.phones')%><div><a href="tel:<%= @sale.phone %>"><%= @sale.phone %></a></div>
+    <%= t('sales.about')%>
+    <div>
+      <%= @sale.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+      <%= @sale.text_ru if params[:locale] == 'ru' %>
+      <%= @sale.text_tm if params[:locale] == 'tm' %>
+    </div>
+    <hr>
+    <%= t('sales.phones')%><div><a href="tel:<%= @sale.phone %>"><%= @sale.phone %></a></div>
     <hr>
       E-mail:
     <div>
