@@ -14,8 +14,19 @@ class SalesController < ApplicationController
     @nophoto.each do |nophoto|
       @no = nophoto.image
     end
+    @salesauto = Sale.where(type_id: params[:id])
+    @saf = @salesauto.where(sales: false)
   end
   def more
+    @keys = Key.all
+    @keys.each do |key|
+      if key.key != @activation
+
+          redirect_to '/admin'
+
+
+      end
+    end
     @nophoto = Nophoto.all
 
     @nophoto.each do |nophoto|

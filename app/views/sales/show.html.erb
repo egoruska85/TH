@@ -6,51 +6,35 @@
   <% end %>
 </center>
 <div class="container">
-  <div class="row">
-    <% if params[:id] == '1' %>
-      <% @saf.each do |sale| %>
-    <div class="col">
-      <% if sale.image.attached? %>
-        <%= image_tag(sale.image, style:'width:150px; height: 100px')%>
-      <% else %>
-        <%= image_tag(@no, style:'width:150px; height: 100px') %>
-      <% end %>
-      <h6>
-        <%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-        <%= sale.title_ru if params[:locale] == 'ru' %>
-        <%= sale.title_tm if params[:locale] == 'tm' %>
-      </h6>
-      <%= link_to 'Подробнее', [:more, sale] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-      <%= link_to 'Подробнее', [:more, sale] if params[:locale] == 'ru' %>
-      <%= link_to 'has giňişleýin maglumat', [:more, sale] if params[:locale] == 'tm' %>
-    </div>
-    <% end %>
-  <% end %>
-  </div>
-</div>
 
-
-<div class="container">
-  <div class="row">
-    <% if params[:id] == '2' %>
-      <% @stf.each do |sale| %>
-        <div class="col">
-          <% if sale.image.attached? %>
-            <%= image_tag(sale.image, style:'width:150px; height: 100px')%>
-          <% else %>
-            <%= image_tag(@no, style:'width:150px; height: 100px') %>
-          <% end %>
-          <h6>
-            <%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-            <%= sale.title_ru if params[:locale] == 'ru' %>
-            <%= sale.title_tm if params[:locale] == 'tm' %>
-          </h6>
-          <%= link_to 'Подробнее', [:more, sale] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-          <%= link_to 'Подробнее', [:more, sale] if params[:locale] == 'ru' %>
-          <%= link_to 'has giňişleýin maglumat', [:more, sale] if params[:locale] == 'tm' %>
+  <% @saf.each do |sale| %>
+    <div class="site-section">
+      <div class="block__73694 mb-2" id="services-section">
+        <div class="container">
+          <div class="row d-flex no-gutters align-items-stretch">
+            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <% if sale.image.attached? %>
+              <%= image_tag(sale.image, style:'width: 50%') %>
+            <% else %>
+              <%= image_tag(@no, style:'width: 50%') %>
+            <% end %>
+            </div>
+            <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+              <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= sale.title_tm if params[:locale] == 'tm' %></h2>
+              <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+              <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+              <p><%= simple_format sale.text_tm.length <= 100 ? sale.text_tm : sale.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+              <%= link_to more_sale_path(sale) do %>
+                Подробнее
+              <% end %>
+            </div>
+          </div>
         </div>
-      <% end %>
-    <% end %>
-  </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
 
 </div>

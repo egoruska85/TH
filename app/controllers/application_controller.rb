@@ -37,8 +37,7 @@ def params_variable
   @saf = @salesauto.where(sales: false)
   @salesteh = Sale.where(type_id: '2')
   @stf = @salesteh.where(sales: false)
-  @purchasesauto = Purchase.where(type_id: '1')
-  @purchasesteh = Purchase.where(type_id: '2')
+
   @dealdones = Dealdone.all
   @dealdones.each do |image|
     @dealdone = image.image

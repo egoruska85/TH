@@ -12,12 +12,22 @@ class SearchesController < ApplicationController
 
       end
     end
+    @labelrent = Typesofrent.find(params[:id])
     @searches = Search.where(public: true)
     @searches1 = @searches.where(typesofrent_id: params[:id])
     #@searches2 = @searches.where(typesofrent_id: '2')
     #@searches3 = @searches.where(typesofrent_id: '3')
   end
   def more
+    @keys = Key.all
+    @keys.each do |key|
+      if key.key != @activation
+
+          redirect_to '/admin'
+
+
+      end
+    end
     @nophoto = Nophoto.all
 
     @nophoto.each do |nophoto|

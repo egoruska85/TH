@@ -12,11 +12,21 @@ class RentsController < ApplicationController
 
       end
     end
+    @labelrent = Typesofrent.find(params[:id])
     @rents = Rent.where(public: true)
     @rents1 = @rents.where(typesofrent_id: params[:id])
 
   end
   def more
+    @keys = Key.all
+    @keys.each do |key|
+      if key.key != @activation
+
+          redirect_to '/admin'
+
+
+      end
+    end
     @nophoto = Nophoto.all
 
     @nophoto.each do |nophoto|
