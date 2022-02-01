@@ -1,47 +1,77 @@
 
+<style media="screen">
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
 
+<% if @rent != nil %>
+  <div class="container">
+  <h1>
+  <%= @rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+  <%= @rent.title_ru if params[:locale] == 'ru' %>
+  <%= @rent.title_tm if params[:locale] == 'tm' %>
+  </h1>
+  <% if @rent.image.attached? %>
+    <%= image_tag(@rent.image)%>
+  <% else %>
+    <%= image_tag(@no) %>
+  <% end %>
+  <hr>
+  <%= t('sales.brand')%><div><%= @brand.name %></div>
+  <hr>
+  <% if @rent.model_id == nil %>
+    <%= t('sales.model')%><div><%= t('sales.nomodel')%></div>
+  <% else %>
+    <%= t('sales.model')%><div><%= @model.name %></div>
+  <% end %>
+  <hr>
+  <%= t('sales.year')%><div><%= @rent.year %></div>
+  <hr>
+  <%= t('sales.price')%><div><%= @rent.price %></div>
+  <hr>
+  <%= t('sales.about')%>
+  <div>
+    <%= @rent.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @rent.text_ru if params[:locale] == 'ru' %>
+    <%= @rent.text_tm if params[:locale] == 'tm' %>
+  </div>
+  <hr>
+    <%= t('sales.phones')%><div><a href="tel:<%= @rent.phone %>"><%= @rent.phone %></a></div>
+  <hr>
+    E-mail:
+  <div>
+    <%= mail_to @rent.email %>
+  </div>
+  <hr>
+  <%= check_box_tag 'admin', '1', @rent.cashless, :disabled => true %><%= t('sales.cashless') %>
+  <hr>
+  <%= @region.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+  <%= @region.name if params[:locale] == 'ru' %>
+  <%= @region.name_tm if params[:locale] == 'tm' %>
+  <hr>
+  <% @rent.images.each do |image|%>
+    <%= image_tag(image)%>
+  <% end %>
+  </div>
+  <% elsif %>
+  <div class="parallax">
+    <%= image_tag(@dealdone, style:'width: 100%; opacity:.2;') %>
+    <center>
+    <div class="centered">
 
+      <%= t('purchase.purchase')%>
 
+      <%= link_to root_path, class:'btn btn-light' do %>
+        <%= t('sale.sales_back')%>
 
-
-
-
-
-
-<div class="container">
-<h1>
-<%= @rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-<%= @rent.title_ru if params[:locale] == 'ru' %>
-<%= @rent.title_tm if params[:locale] == 'tm' %>
-</h1>
-<% if @rent.image.attached? %>
-  <%= image_tag(@rent.image)%>
-<% else %>
-  <%= image_tag(@no) %>
+    </div>
+    </center>
+    <% end %>
 <% end %>
-<hr>
-<%= @rent.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-<%= @rent.text_ru if params[:locale] == 'ru' %>
-<%= @rent.text_tm if params[:locale] == 'tm' %>
-<hr>
-<%= @rent.year %>
-<hr>
-<%= t('sales.price')%><div><%= @rent.price %></div>
-<hr>
-  <%= t('sales.phones')%><div><a href="tel:<%= @rent.phone %>"><%= @rent.phone %></a></div>
-<hr>
-  E-mail:
-<div>
-  <%= mail_to @rent.email %>
 </div>
-<hr>
-<%= check_box_tag 'admin', '1', @rent.cashless, :disabled => true %><%= t('sales.cashless') %>
-<hr>
-<%= @region.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-<%= @region.name if params[:locale] == 'ru' %>
-<%= @region.name_tm if params[:locale] == 'tm' %>
-<hr>
-<% @rent.images.each do |image|%>
-  <%= image_tag(image)%>
-<% end %>
-</div>
+<br>

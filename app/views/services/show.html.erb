@@ -6,8 +6,16 @@
           <%= image_tag(@service.image, style:'width: 100%') %>
         </div>
         <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-          <h2 class="mb-3 text-black"><%= @service.name_ru %></h2>
-          <p><%= simple_format @service.text_ru, style:'font-size: 13px' %></p>
+          <h2 class="mb-3 text-black">
+            <%= @service.name_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= @service.name_ru if params[:locale] == 'ru' %>
+            <%= @service.name_tm if params[:locale] == 'tm' %>
+          </h2>
+          <p>
+            <%= simple_format @service.text_ru, style:'font-size: 13px' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= simple_format @service.text_ru, style:'font-size: 13px' if params[:locale] == 'ru' %>
+            <%= simple_format @service.text_tm, style:'font-size: 13px' if params[:locale] == 'tm' %>
+          </p>
 
         </div>
       </div>

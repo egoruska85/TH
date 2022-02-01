@@ -1,5 +1,10 @@
 <center>
-  <h1><%= @labelrent.name %></h1>
+  <h1><%= t('rent_show')%></h1>
+  <h2>
+    <%= @labelrent.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @labelrent.name if params[:locale] == 'ru' %>
+    <%= @labelrent.name_tm if params[:locale] == 'tm' %>
+  </h2>
 
 
 
@@ -16,31 +21,35 @@
 </center>
 
 
-
-
-
-
-
 <div class="container">
-  <div class="row">
 
-      <% @rents1.each do |rent| %>
-    <div class="col">
-      <% if rent.image.attached? %>
-        <%= image_tag(rent.image, style:'width:150px; height: 100px')%>
-      <% else %>
-        <%= image_tag(@no, style:'width:150px; height: 100px') %>
-      <% end %>
-      <h6>
-        <%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-        <%= rent.title_ru if params[:locale] == 'ru' %>
-        <%= rent.title_tm if params[:locale] == 'tm' %>
-      </h6>
-      <%= link_to 'Подробнее', [:more, rent] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-      <%= link_to 'Подробнее', [:more, rent] if params[:locale] == 'ru' %>
-      <%= link_to 'has giňişleýin maglumat', [:more, rent] if params[:locale] == 'tm' %>
+  <% @rents1.each do |rent| %>
+    <div class="site-section">
+      <div class="block__73694 mb-2" id="services-section">
+        <div class="container">
+          <div class="row d-flex no-gutters align-items-stretch">
+            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <% if rent.image.attached? %>
+              <%= image_tag(rent.image, style:'width: 50%') %>
+            <% else %>
+              <%= image_tag(@no, style:'width: 50%') %>
+            <% end %>
+
+              <h2 class="mb-3 text-black"><%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= rent.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= rent.title_tm if params[:locale] == 'tm' %></h2>
+              <p><%= simple_format rent.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+              <p><%= simple_format rent.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+              <p><%= simple_format rent.text_tm.length <= 100 ? rent.text_tm : rent.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+              <%= link_to more_rent_path(rent) do %>
+                <%= t('more')%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <% end %>
+    <hr>
+  <% end %>
 
-  </div>
 </div>

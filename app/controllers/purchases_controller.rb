@@ -14,6 +14,7 @@ class PurchasesController < ApplicationController
     @nophoto.each do |nophoto|
       @no = nophoto.image
     end
+  @type = Type.find(params[:id])  
   @purchase = Purchase.where(type_id: params[:id])
   end
   def more

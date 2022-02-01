@@ -37,6 +37,14 @@ class RentsController < ApplicationController
     @regions.each do |region|
       @region = region
     end
+    @brands = Brand.where(id: @rent.brand_id)
+    @brands.each do |brand|
+      @brand = brand
+    end
+    @models = Model.where(id: @rent.model_id)
+    @models.each do |model|
+      @model = model
+    end
 
   end
   def new

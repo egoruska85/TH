@@ -1,4 +1,9 @@
 ru:
+  see: "ПРОСМОТР"
+  search_show: "АРЕНДА, ПОИСК"
+  rent_show: "АРЕНДА, ПРЕДЛОЖЕНИЕ"
+  more: "ПОДРОБНЕЕ"
+  sale_show: "ПРОДАЖА"
   services: "услуги"
   sales:
     phones: "Телефоны:"

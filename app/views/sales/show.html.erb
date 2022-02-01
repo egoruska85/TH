@@ -1,10 +1,17 @@
-<center>
-  <% if params[:id] == '1' %>
-    <h1>ПРОДАЖА АВТОМОБИЛИ</h1>
-  <% elsif params[:id] == '2' %>
-    <h1>ПРОДАЖА СТРОИТЕЛЬНАЯ ТЕХНИКА</h1>
-  <% end %>
-</center>
+
+  <center>
+      <h1><%= t('sale_show')%></h1>
+      <h2>
+        <%= @type.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%>
+        <%= @type.name if params[:locale] == 'ru' %>
+        <%= @type.name_tm if params[:locale] == 'tm' %>
+      </h2>
+
+
+
+  </center>
+
+
 <div class="container">
 
   <% @saf.each do |sale| %>
@@ -12,14 +19,13 @@
       <div class="block__73694 mb-2" id="services-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
-            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <div class="col-6 col-lg-6 block__73422" data-aos="fade-left" data-aos-delay="">
             <% if sale.image.attached? %>
               <%= image_tag(sale.image, style:'width: 50%') %>
             <% else %>
               <%= image_tag(@no, style:'width: 50%') %>
             <% end %>
-            </div>
-            <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+
               <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] == 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= sale.title_tm if params[:locale] == 'tm' %></h2>
@@ -27,7 +33,7 @@
               <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
               <p><%= simple_format sale.text_tm.length <= 100 ? sale.text_tm : sale.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
               <%= link_to more_sale_path(sale) do %>
-                Подробнее
+                <%= t('more')%>
               <% end %>
             </div>
           </div>

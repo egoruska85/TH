@@ -44,7 +44,7 @@ def params_variable
   end
   @time = Time.now
   @service_link = Service.where(name_ru: 'СМЕТНЫЙ АУТСОРСИНГ')
-
+  @banners = Banner.all
 end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_26_030106) do
+ActiveRecord::Schema.define(version: 2022_02_01_083238) do
 
   create_table "aboutimages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -54,6 +54,18 @@ ActiveRecord::Schema.define(version: 2022_01_26_030106) do
     t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "banners", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_tm"
+    t.string "title_en"
+    t.text "text_ru"
+    t.text "text_tm"
+    t.text "text_en"
+    t.string "link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "brands", force: :cascade do |t|

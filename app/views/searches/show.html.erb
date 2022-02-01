@@ -1,5 +1,12 @@
 <center>
-<h1><%= @labelrent.name %></h1>
+  <h1><%= t('search_show')%></h1>
+  <h2>
+
+    <%= @labelrent.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @labelrent.name if params[:locale] == 'ru' %>
+    <%= @labelrent.name_tm if params[:locale] == 'tm' %>
+  </h2>
+
 </center>
 
 
@@ -11,25 +18,34 @@
 </center>
 
 <div class="container">
-  <div class="row">
 
-      <% @searches1.each do |search| %>
-    <div class="col">
-      <% if search.image.attached? %>
-        <%= image_tag(search.image, style:'width:150px; height: 100px')%>
-      <% else %>
-        <%= image_tag(@no, style:'width:150px; height: 100px') %>
-      <% end %>
-      <h6>
-        <%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-        <%= search.title_ru if params[:locale] == 'ru' %>
-        <%= search.title_tm if params[:locale] == 'tm' %>
-      </h6>
-      <%= link_to 'Подробнее', [:more, search] if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-      <%= link_to 'Подробнее', [:more, search] if params[:locale] == 'ru' %>
-      <%= link_to 'has giňişleýin maglumat', [:more, search] if params[:locale] == 'tm' %>
+  <% @searches1.each do |search| %>
+    <div class="site-section">
+      <div class="block__73694 mb-2" id="services-section">
+        <div class="container">
+          <div class="row d-flex no-gutters align-items-stretch">
+            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <% if search.image.attached? %>
+              <%= image_tag(search.image, style:'width: 50%') %>
+            <% else %>
+              <%= image_tag(@no, style:'width: 50%') %>
+            <% end %>
+
+              <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= search.title_tm if params[:locale] == 'tm' %></h2>
+              <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+              <p><%= simple_format search.text_tm.length <= 100 ? search.text_tm : search.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+              <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+              <%= link_to more_search_path(search) do %>
+                <%= t('more')%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <% end %>
+    <hr>
+  <% end %>
 
-  </div>
 </div>

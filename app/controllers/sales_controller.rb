@@ -14,6 +14,7 @@ class SalesController < ApplicationController
     @nophoto.each do |nophoto|
       @no = nophoto.image
     end
+    @type = Type.find(params[:id])
     @salesauto = Sale.where(type_id: params[:id])
     @saf = @salesauto.where(sales: false)
   end

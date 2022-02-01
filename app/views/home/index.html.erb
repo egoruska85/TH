@@ -21,21 +21,33 @@
 
 
 
-
-  <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/4473122740.jpg'); " >
+<% @banners.each do |banner| %>
+  <div class="site-section-cover overlay img-bg-section" style="background-image: url(<%= rails_blob_url(banner.image)%>); " >
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-12 col-lg-7">
-          <h1 data-aos="fade-up" data-aos-delay="">Добро пожаловать на сайт!</h1>
-          <p class="mb-5" data-aos="fade-up" data-aos-delay="100">Мы начинаем!</p>
-          <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-outline-white border-w-2 btn-md">Добро пожаловать</a></p>
+          <h1 data-aos="fade-up" data-aos-delay="">
+            <%= banner.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= banner.title_ru if params[:locale] == 'ru' %>
+            <%= banner.title_tm if params[:locale] == 'tm' %>
+          </h1>
+          <p class="mb-5" data-aos="fade-up" data-aos-delay="100">
+            <%= banner.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+            <%= banner.text_ru if params[:locale] == 'ru' %>
+            <%= banner.text_tm if params[:locale] == 'tm' %>
+          </p>
+          <p data-aos="fade-up" data-aos-delay="200">
+            <%= link_to banner.link + "#{params[:locale]}", class:'btn btn-outline-white border-w-2 btn-md' do %>
+            <%= t('see')%>
+            <% end %>
+          </p>
         </div>
       </div>
     </div>
 
   </div>
-
-  <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/yyy.jpeg'); " >
+<% end %>
+  <!--<div class="site-section-cover overlay img-bg-section" style="background-image: url('images/yyy.jpeg'); " >
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-md-12 col-lg-8">
@@ -58,7 +70,7 @@
       </div>
     </div>
 
-  </div>
+  </div>-->
 </div>
 
 
@@ -69,7 +81,9 @@
   <% @abouts.each do |about| %>
     <center>
       <h1>
-        <%= about.title_ru %>
+        <%= about.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+        <%= about.title_ru if params[:locale] == 'ru' %>
+        <%= about.title_tm if params[:locale] == 'tm' %>
       </h1>
     </center>
     <div class="row">
@@ -77,7 +91,9 @@
         <%= image_tag(about.image) %>
       </div>
       <div class="col">
-        <%= simple_format about.text_ru %>
+        <%= simple_format about.text_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+        <%= simple_format about.text_ru if params[:locale] == 'ru' %>
+        <%= simple_format about.text_tm if params[:locale] == 'tm' %>
       </div>
 
     </div>

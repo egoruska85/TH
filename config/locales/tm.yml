@@ -1,4 +1,9 @@
 tm:
+  see: "GÖRNÜŞ"
+  search_show: "KÄRENDE, GÖZLEME"
+  rent_show: "KÄRENDE, HÖDÜRLEME"
+  more: "DOLY"
+  sale_show: "SATYŞ"
   services: "hyzmatlar"
   sales:
     phones: "Telefonlar:"
@@ -8,7 +13,7 @@ tm:
     model: "Model:"
     year: "Neşir edilen ýyly"
     about: "Has köp:"
-    nomodel: "Görkezilmedi"    
+    nomodel: "Görkezilmedi"
   navbar:
     main: "Baş sahypa"
     services: "Hyzmatlar"
