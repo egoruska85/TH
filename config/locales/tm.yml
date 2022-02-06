@@ -1,4 +1,9 @@
 tm:
+  time: "Wagt"
+  author: "Awtor"
+  no_comments: "Teswirsiz"
+  write: "Ýaz"
+  body: "Teswir"
   see: "GÖRNÜŞ"
   search_show: "KÄRENDE, GÖZLEME"
   rent_show: "KÄRENDE, HÖDÜRLEME"

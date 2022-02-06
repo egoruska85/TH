@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :activations
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :services
+  resources :services do
+    resources :comments
+  end
   resources :rents do
     member {get :more}
   end
