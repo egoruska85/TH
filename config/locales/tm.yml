@@ -1,4 +1,7 @@
 tm:
+  public: "Ýayratmak"
+  photo: "Esasy surat"
+  photos: "Galereýa"
   time: "Wagt"
   author: "Awtor"
   no_comments: "Teswirsiz"
@@ -19,6 +22,8 @@ tm:
     year: "Neşir edilen ýyly"
     about: "Has köp:"
     nomodel: "Görkezilmedi"
+    region: "Sebit"
+    phone: "Telefon"
   navbar:
     main: "Baş sahypa"
     services: "Hyzmatlar"
@@ -36,6 +41,9 @@ tm:
     car: "Awtoulag kärendesi teklibi"
     teh: "Gurluşyk enjamlaryny kärendesine almak, teklip"
     mat: "Gurluşyk materiallaryny kärendesine almak, teklip"
+    title: "Ady"
+    text: "Mazmun"
+    typeteh: "Enjamlaryň görnüşi"
   search:
     car: "Awtoulag kärendesi, gözleg"
     teh: "Gurluşyk enjamlaryny kärendesine almak, gözlemek"

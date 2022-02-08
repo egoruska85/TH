@@ -17,6 +17,20 @@ class RentsController < ApplicationController
     @rents1 = @rents.where(typesofrent_id: params[:id])
 
   end
+  def new
+    @regions = Region.all
+    @typesofrents = Typesofrent.all
+    @brands = Brand.all
+    @models = Model.all
+  end
+  def create
+    @rent = Rent.new(rent_params)
+if @rent.save
+  redirect_to more_rent_path(@rent)
+else
+   render action: 'new'
+end
+  end
   def more
     @keys = Key.all
     @keys.each do |key|
@@ -47,7 +61,11 @@ class RentsController < ApplicationController
     end
 
   end
-  def new
+  private
 
+  def rent_params
+    params.require(:rent).permit(:title_ru, :title_tm, :title_en, :text_ru, :text_tm, :text_en, :region_id, :year, :typesofrent_id, :phone, :price, :email, :public, :model_id, :brand_id, :search, :cashless, :image, :images)
   end
+
+
 end
