@@ -1,4 +1,3 @@
-
   <center>
       <h1><%= t('sale_show')%></h1>
       <h2>
@@ -26,9 +25,9 @@
               <%= image_tag(@no, style:'width: 50%') %>
             <% end %>
 
-              <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
-              <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] == 'ru' %></h2>
-              <h2 class="mb-3 text-black"><%= sale.title_tm if params[:locale] == 'tm' %></h2>
+              <h2 class="mb-3 text-white"><%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-white"><%= sale.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-white"><%= sale.title_tm if params[:locale] == 'tm' %></h2>
               <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
               <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
               <p><%= simple_format sale.text_tm.length <= 100 ? sale.text_tm : sale.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>

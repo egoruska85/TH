@@ -6,7 +6,7 @@
           <%= image_tag(@service.image, style:'width: 100%') %>
         </div>
         <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-          <h2 class="mb-3 text-black">
+          <h2 class="mb-3 text-white">
             <%= @service.name_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
             <%= @service.name_ru if params[:locale] == 'ru' %>
             <%= @service.name_tm if params[:locale] == 'tm' %>

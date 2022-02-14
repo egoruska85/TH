@@ -38,9 +38,12 @@
               <h2 class="mb-3 text-black"><%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= rent.title_ru if params[:locale] == 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= rent.title_tm if params[:locale] == 'tm' %></h2>
+              <% if rent.text_ru != nil %>
               <p><%= simple_format rent.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
               <p><%= simple_format rent.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+              <% elsif rent.text_tm != nil %>
               <p><%= simple_format rent.text_tm.length <= 100 ? rent.text_tm : rent.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+              <% end %>
               <%= link_to more_rent_path(rent) do %>
                 <%= t('more')%>
               <% end %>

@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <br><br><br><br>
+
+      <%= form_for :rent, url: rent_path(@rent), method: :put do |f| %>
+      <div class="container">
+        <center>
+          <%= f.label t('rent.title'), class:'form-label' %>
+          <% if params[:locale] == 'ru' %>
+            <%= f.text_field :title_ru, class:'form-control', style:'width: absolute' %>
+          <% elsif params[:locale] == 'tm'%>
+            <%= f.text_field :title_tm, class:'form-control', style:'width: absolute' %>
+          <% end %>
+        </center>
+        <center>
+          <%= f.label t('rent.text'), class:'form-label' %>
+          <% if params[:locale] == 'ru' %>
+            <%= f.text_area :text_ru, class:'form-control', style:'width: absolute' %>
+          <% elsif params[:locale] == 'tm'%>
+            <%= f.text_area :text_tm, class:'form-control', style:'width: absolute' %>
+          <% end %>
+        </center>
+    <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <%= f.label t('sales.brand') %>
+          <%= f.select(:brand_id, [], {}, { :class => 'form-control' }) do %>
+            <%= @brands.each do |c| %>
+              <%= content_tag(:option, c.name, value: c.id ) %>
+            <% end %>
+          <% end %>
+
+
+        </div>
+        <div class="col-4">
+          <%= f.label t('rent.typeteh') %>
+          <%= f.select(:typesofrent_id, [], {}, { :class => 'form-control' }) do %>
+            <%= @typesofrents.each do |c| %>
+              <%= content_tag(:option, c.name, value: c.id ) if params[:locale] == 'ru'%>
+              <%= content_tag(:option, c.name_tm, value: c.id ) if params[:locale] == 'tm' %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-4">
+          <%= f.label t('sales.region') %>
+          <%= f.select(:region_id, [], {}, { :class => 'form-control' }) do %>
+            <%= @regions.each do |c| %>
+              <%= content_tag(:option, c.name, value: c.id ) if params[:locale] == 'ru' %>
+              <%= content_tag(:option, c.name_tm, value: c.id ) if params[:locale] == 'tm' %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-4">
+          <%= f.label t('sales.brand') %>
+          <%= f.select(:model_id, [], {}, { :class => 'form-control' }) do %>
+            <%= @models.each do |c| %>
+              <%= content_tag(:option, c.name, value: c.id )%>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-4">
+          <%= f.label t('sales.year') %>
+          <%= f.text_field :year, :class => 'form-control' %>
+        </div>
+        <div class="col-4">
+          <%= f.label t('sales.price') %>
+          <%= f.text_field :price, :class => 'form-control' %>
+          <%= f.label t('sales.cashless') %>
+          <%= f.check_box :cashless %>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <%= f.label t('sales.phone') %>
+          <%= f.text_field :phone, :class => 'form-control' %>
+        </div>
+        <div class="col-4">
+          <%= f.label 'Email' %>
+          <%= f.text_field :email, class:'form-control', placeholder: t('no_write'), value:"#{current_user.email}" %>
+        </div>
+        <div class="col-4">
+          <%= f.label t('name_user') %>
+          <%= f.text_field :name, :class => 'form-control', value:"#{current_user.username}" %>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <center>
+      <div class="mb-3">
+        <%= f.label t('photo'), for:'formFile', class:'form-label' %>
+        <%= f.file_field :image, class:'form-control', type:'file', id:'formFile', style:'width: 400px' %>
+      </div>
+      <div class="mb-3">
+      <%= f.label t('photos'), for:'formFile', class:'form-label' %>
+      <%= f.file_field :images, multiple: true, class:'form-control', type:'file', id:'formFileMultiple', style:'width: 400px' %>
+    </div>
+    <p><%= f.submit t('change'), class:'btn btn-success' %></p>
+    <% end %>
+    </center>
+
+
+  </body>
+</html>

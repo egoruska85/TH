@@ -15,6 +15,13 @@
   <%= @rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
   <%= @rent.title_ru if params[:locale] == 'ru' %>
   <%= @rent.title_tm if params[:locale] == 'tm' %>
+  <% if current_user %>
+    <% if current_user.id == @rent.username_id %>
+      <%= link_to edit_rent_path(@rent) do %>
+        <span class="icon-pencil"></span>
+      <% end %>
+    <% end %>
+  <% end %>  
   </h1>
   <% if @rent.image.attached? %>
     <%= image_tag(@rent.image)%>

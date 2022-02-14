@@ -31,12 +31,15 @@
               <%= image_tag(@no, style:'width: 50%') %>
             <% end %>
 
-              <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
-              <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] == 'ru' %></h2>
-              <h2 class="mb-3 text-black"><%= search.title_tm if params[:locale] == 'tm' %></h2>
+              <h2 class="mb-3 text-white"><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-white"><%= search.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-white"><%= search.title_tm if params[:locale] == 'tm' %></h2>
+              <% if search.text_ru != nil %>
               <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
               <p><%= simple_format search.text_tm.length <= 100 ? search.text_tm : search.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+              <% elsif search.text_tm != nil %>
               <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+              <% end %>
               <%= link_to more_search_path(search) do %>
                 <%= t('more')%>
               <% end %>

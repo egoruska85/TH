@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/css/earth.css">
+<center>
+  <h2><%= current_user.username %></h2>
+    <%= link_to edit_user_registration_path(current_user.id), class:'btn btn-dark' do %>
+      <%= t('change_date')%>
+    <% end %>
+    <hr>
+
+    <h3><%= t('our_add')%></h3>
+    <h4><%= t('rents')%></h4>
+    <%= link_to new_rent_path, class:'btn btn-light' do %>
+      <% t('add')%>
+    <% end %>
+</center>
+<center>
+    <div class="container">
+
+      <% @rents.each do |rent| %>
+        <div class="site-section">
+          <div class="block__73694 mb-2" id="services-section">
+            <div class="container">
+              <div class="row d-flex no-gutters align-items-stretch">
+                <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+                <% if rent.image.attached? %>
+                  <%= image_tag(rent.image, style:'width: 50%') %>
+                <% else %>
+                  <%= image_tag(@no, style:'width: 50%') %>
+                <% end %>
+
+                  <h2 class="mb-3 "><%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+                  <h2 class="mb-3 "><%= rent.title_ru if params[:locale] == 'ru' %></h2>
+                  <h2 class="mb-3 "><%= rent.title_tm if params[:locale] == 'tm' %></h2>
+                  <% if rent.text_ru != nil %>
+                  <p><%= simple_format rent.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+                  <p><%= simple_format rent.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+                  <% end %>
+                  <% if rent.text_tm != nil %>
+                  <p><%= simple_format rent.text_tm.length <= 100 ? rent.text_tm : rent.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+                  <% end %>
+                  <% if rent.public == true %>
+                    <%= t('public')%>
+                  <% end %><br>
+                  <%= link_to more_rent_path(rent) do %>
+                    <%= t('more')%>
+                  <% end %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      <% end %>
+
+    </div>
+    </center>
+  <br><br>
+    <center>
+      <h4><%= t('search_show')%></h4>
+      <%= link_to new_search_path, class:'btn btn-light' do %>
+        Добавить
+      <% end %>
+    <center>
+      <div class="container">
+
+        <% @searches.each do |search| %>
+          <div class="site-section">
+            <div class="block__73694 mb-2" id="services-section">
+              <div class="container">
+                <div class="row d-flex no-gutters align-items-stretch">
+                  <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+                  <% if search.image.attached? %>
+                    <%= image_tag(search.image, style:'width: 50%') %>
+                  <% else %>
+                    <%= image_tag(@no, style:'width: 50%') %>
+                  <% end %>
+
+                    <h2 class="mb-3 "><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+                    <h2 class="mb-3 "><%= search.title_ru if params[:locale] == 'ru' %></h2>
+                    <h2 class="mb-3 "><%= search.title_tm if params[:locale] == 'tm' %></h2>
+                    <% if search.text_ru != nil%>
+                    <p><%= simple_format search.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+                    <p><%= simple_format search.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+                    <% elsif search.text_tm %>
+                    <p><%= simple_format search.text_tm.length <= 100 ? rent.text_tm : rent.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+                    <% end %>
+                    <%= link_to more_search_path(search) do %>
+                      <%= t('more')%>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+        <% end %>
+
+      </div>
+<div id="box"></div>

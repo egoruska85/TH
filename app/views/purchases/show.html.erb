@@ -25,9 +25,9 @@
               <%= image_tag(@no, style:'width: 50%') %>
             <% end %>
 
-              <h2 class="mb-3 text-black"><%= purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
-              <h2 class="mb-3 text-black"><%= purchase.title_ru if params[:locale] == 'ru' %></h2>
-              <h2 class="mb-3 text-black"><%= purchase.title_tm if params[:locale] == 'tm' %></h2>
+              <h2 class="mb-3 text-white"><%= purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-white"><%= purchase.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-white"><%= purchase.title_tm if params[:locale] == 'tm' %></h2>
               <p><%= simple_format purchase.text_ru.length <= 100 ? purchase.text_ru : purchase.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
               <p><%= simple_format purchase.text_ru.length <= 100 ? purchase.text_ru : purchase.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
               <p><%= simple_format purchase.text_tm.length <= 100 ? purchase.text_tm : purchase.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>

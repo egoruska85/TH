@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_06_182532) do
+ActiveRecord::Schema.define(version: 2022_02_14_161224) do
 
   create_table "aboutimages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -105,6 +105,17 @@ ActiveRecord::Schema.define(version: 2022_02_06_182532) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "news", force: :cascade do |t|
+    t.string "title_ru"
+    t.string "title_tm"
+    t.string "title_en"
+    t.text "text_ru"
+    t.text "text_tm"
+    t.text "text_en"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "nophotos", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -161,6 +172,8 @@ ActiveRecord::Schema.define(version: 2022_02_06_182532) do
     t.boolean "cashless"
     t.integer "brand_id"
     t.integer "model_id"
+    t.string "name"
+    t.integer "username_id"
     t.index ["brand_id"], name: "index_rents_on_brand_id"
     t.index ["model_id"], name: "index_rents_on_model_id"
     t.index ["region_id"], name: "index_rents_on_region_id"
@@ -209,6 +222,9 @@ ActiveRecord::Schema.define(version: 2022_02_06_182532) do
     t.boolean "cashless"
     t.integer "brand_id"
     t.integer "model_id"
+    t.string "name"
+    t.integer "username"
+    t.integer "username_id"
     t.index ["brand_id"], name: "index_searches_on_brand_id"
     t.index ["model_id"], name: "index_searches_on_model_id"
     t.index ["region_id"], name: "index_searches_on_region_id"
