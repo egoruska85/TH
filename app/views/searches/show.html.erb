@@ -26,7 +26,7 @@
       <div class="block__73694 mb-2" id="services-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
-            <div class="col-6 col-md-3 block__73422" data-aos="fade-left" data-aos-delay="">
+            <div class="col-6 col-md-3 block__73422" data-aos="fade-right" data-aos-delay="">
               <div class="card" style="width: 10rem;">
             <% if search.image.attached? %>
               <%= image_tag(search.image) %>
@@ -36,7 +36,7 @@
             </div>
             <%= check_box_tag 'admin', '1', search.busy, :disabled => true %><%= t('rent.busy') %>
             </div>
-            <div class="col-6 col-md-9 block__73422" data-aos="fade-right" data-aos-delay="">
+            <div class="col-6 col-md-9 block__73422" data-aos="fade-left" data-aos-delay="">
               <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] == 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= search.title_tm if params[:locale] == 'tm' %></h2>
