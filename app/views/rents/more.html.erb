@@ -8,9 +8,21 @@
     transform: translate(-50%, -50%);
 }
 </style>
+<center>
+  <h1><%= t('rent_show')%></h1>
+  <h2>
+    <%= @labelrent.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @labelrent.name if params[:locale] == 'ru' %>
+    <%= @labelrent.name_tm if params[:locale] == 'tm' %>
+  </h2>
 
+
+
+
+
+</center>
 <% if @rent != nil %>
-  <div class="container">
+  <div class="container" style="background-color: rgba(169,169,169, 0.2);">
   <h1>
   <%= @rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
   <%= @rent.title_ru if params[:locale] == 'ru' %>
@@ -21,7 +33,7 @@
         <span class="icon-pencil"></span>
       <% end %>
     <% end %>
-  <% end %>  
+  <% end %>
   </h1>
   <% if @rent.image.attached? %>
     <%= image_tag(@rent.image)%>
@@ -61,9 +73,17 @@
   <%= @region.name if params[:locale] == 'ru' %>
   <%= @region.name_tm if params[:locale] == 'tm' %>
   <hr>
-  <% @rent.images.each do |image|%>
-    <%= image_tag(image)%>
+  <div class="row">
+    <% @rent.images.each do |image|%>
+      <div class="col-6 col-md-2">
+
+          <%= image_tag(image, class:'productsimages rounded open-popup')%>
+
+      </div>
+
+
   <% end %>
+  </div>
   </div>
   <% elsif %>
   <div class="parallax">

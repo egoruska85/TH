@@ -15,8 +15,7 @@ class SearchesController < ApplicationController
     @labelrent = Typesofrent.find(params[:id])
     @searches = Search.where(public: true)
     @searches1 = @searches.where(typesofrent_id: params[:id])
-    #@searches2 = @searches.where(typesofrent_id: '2')
-    #@searches3 = @searches.where(typesofrent_id: '3')
+    @searches2 =  @searches1.order "busy ASC"
     @nophoto = Nophoto.all
 
     @nophoto.each do |nophoto|
@@ -24,6 +23,9 @@ class SearchesController < ApplicationController
     end
   end
   def more
+    @labelrent = Typesofrent.find(params[:id])
+    @searches = Search.where(public: true)
+    @searches1 = @searches.where(typesofrent_id: params[:id])
     @keys = Key.all
     @keys.each do |key|
       if key.key != @activation
@@ -61,13 +63,37 @@ class SearchesController < ApplicationController
   def create
     @search = Search.new(search_params)
     @search.username_id = current_user.id
-if @search.save
-  redirect_to personals_path
-else
-   render action: 'new'
-end
+    if @search.save
+      redirect_to personals_path
+    else
+      render action: 'new'
+    end
   end
+  def edit
+    @regions = Region.all
+    @typesofrents = Typesofrent.all
+    @brands = Brand.all
+    @models = Model.all
+
+    @search = Search.find(params[:id])
+    if @search.username_id != current_user.id
+      redirect_to personals_path
+    end
+  end
+  def update
+  @search = Search.find(params[:id])
+  if @search.update(search_params)
+    redirect_to personals_path
+  else
+    render action: 'edit'
+  end
+  end
+
+
+
+private
+
   def search_params
-    params.require(:searches).permit(:title_ru, :title_tm, :title_en, :text_ru, :text_tm, :text_en, :region_id, :year, :typesofrent_id, :phone, :price, :email, :public, :cashless, :brand_id, :model_id, :name, :username, :username_id)
+    params.require(:search).permit(:title_ru, :title_tm, :title_en, :text_ru, :text_tm, :text_en, :region_id, :year, :typesofrent_id, :phone, :price, :email, :public, :cashless, :brand_id, :model_id, :name, :username, :username_id, :busy)
   end
 end

@@ -1,10 +1,10 @@
 body {
-  background:black url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
+  background:black url(/images/stars_by_paulinemoss-d52un4e.jpg);
   animation: stars 205s linear alternate;
 }
 
 #box {
-  background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
+  background:url(/images/earth-2.jpg);
   background-size:cover;
   border:2px solid #000;
   border-radius:50%;

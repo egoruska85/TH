@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_14_161224) do
+ActiveRecord::Schema.define(version: 2022_02_19_192717) do
 
   create_table "aboutimages", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -83,7 +83,24 @@ ActiveRecord::Schema.define(version: 2022_02_14_161224) do
     t.index ["service_id"], name: "index_comments_on_service_id"
   end
 
+  create_table "contactdetails", force: :cascade do |t|
+    t.string "address_ru"
+    t.string "address_tm"
+    t.string "address_en"
+    t.string "phone1"
+    t.string "phone2"
+    t.string "email1"
+    t.string "email2"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "dealdones", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favicons", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -114,6 +131,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_161224) do
     t.text "text_en"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "link"
   end
 
   create_table "nophotos", force: :cascade do |t|
@@ -174,6 +192,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_161224) do
     t.integer "model_id"
     t.string "name"
     t.integer "username_id"
+    t.boolean "busy"
     t.index ["brand_id"], name: "index_rents_on_brand_id"
     t.index ["model_id"], name: "index_rents_on_model_id"
     t.index ["region_id"], name: "index_rents_on_region_id"
@@ -225,6 +244,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_161224) do
     t.string "name"
     t.integer "username"
     t.integer "username_id"
+    t.boolean "busy"
     t.index ["brand_id"], name: "index_searches_on_brand_id"
     t.index ["model_id"], name: "index_searches_on_model_id"
     t.index ["region_id"], name: "index_searches_on_region_id"

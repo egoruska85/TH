@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= favicon_link_tag asset_path('/images/logoth.png') %>
+    <%= favicon_link_tag rails_blob_url(@f) %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -22,9 +22,11 @@
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/earth.css">
-    <script type="text/javascript" src="/js/tab.js">
-
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <script type="text/javascript" src="/js/tab.js"></script>
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/css/style.css">
@@ -56,14 +58,23 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@tijeglihyzmat.com.tm</span></a>
+            <% @contactdetails.each do |c| %>
+            <%= mail_to c.email1, class:'text-white' do %>
+              <span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block"><%= c.email1%></span>
+            <% end %>
             <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">+ (993) 65555555</span></a>
-
+            <!--<a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">+ (993) 65555555</span></a>-->
+            <%= phone_to c.phone1, class:'text-white' do %>
+              <span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block"><%= c.phone1%></span>
+            <% end %>
+            <% end %>
 
             <div class="float-right">
 
+
+
             <% if current_user  %>
+              <%= current_user.username %>|
               <%= link_to t('quit'), destroy_user_session_path, method: :delete, class:'text-white' %>
             <% else %>
               <%= link_to personals_path do %>
@@ -77,7 +88,11 @@
                   <span class="mr-2 text-white icon-person"></span>
                 <% end %>
               <% end %>
+              <%= link_to 'TM', url_for(locale: :tm), :class => "ml-auto text-white" if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+              <%= link_to 'TM', url_for(locale: :tm), :class => "ml-auto text-white" if params[:locale] == 'ru' %>
+              <%= link_to 'RU', url_for(locale: :ru), :class => "ml-auto text-white" if params[:locale] == 'tm' %>
             </div>
+
 
           </div>
 
@@ -195,12 +210,16 @@
                   <% end %>
                 </li>
                 <li><!--<a href="#press-section" class="nav-link">О нас</a>-->
-
-                  <%= link_to root_path + '#p1' do %>
-
-
-                  <%= t('navbar.about')%>
-                <% end %>
+                    <% if current_page?(root_path)%>
+                      <%= link_to '#p1' do %>
+                        <%= t('navbar.about')%>
+                      <% end %>
+                    <% end %>
+                    <% unless current_page?(root_path) %>
+                      <%= link_to root_path + '#p1' do %>
+                        <%= t('navbar.about')%>
+                      <% end %>
+                    <% end %>
                 </li>
               </ul>
               </nav>
@@ -226,13 +245,11 @@
 
 
     <%= yield %>
+
 <div>
-    <footer class="site-footer" style="opacity: .5">
-      <div class="container">
-        <div id="contact">
-          <%= render 'contact_form' %>
-        </div>
-      </div>
+    <footer class="site-footer" style="opacity: .7" id="footer">
+      <strong>
+
       <div class="container">
         <div class="border-top pt-5 text-center">
           <p class="copyright"><small>
@@ -240,6 +257,7 @@
           </small></p>
         </div>
       </div>
+      </strong>
     </footer>
 
   </div>

@@ -1,3 +1,9 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="/css/slider.css">
+</head>
   <center>
       <h1><%= t('sale_show')%></h1>
       <h2>
@@ -11,35 +17,41 @@
   </center>
 
 
-<div class="container">
+  <div class="novana_ulanekas_wrapper">
 
-  <% @saf.each do |sale| %>
-    <div class="site-section">
-      <div class="block__73694 mb-2" id="services-section">
-        <div class="container">
-          <div class="row d-flex no-gutters align-items-stretch">
-            <div class="col-6 col-lg-6 block__73422" data-aos="fade-left" data-aos-delay="">
-            <% if sale.image.attached? %>
-              <%= image_tag(sale.image, style:'width: 50%') %>
-            <% else %>
-              <%= image_tag(@no, style:'width: 50%') %>
-            <% end %>
-
-              <h2 class="mb-3 text-white"><%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
-              <h2 class="mb-3 text-white"><%= sale.title_ru if params[:locale] == 'ru' %></h2>
-              <h2 class="mb-3 text-white"><%= sale.title_tm if params[:locale] == 'tm' %></h2>
-              <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
-              <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
-              <p><%= simple_format sale.text_tm.length <= 100 ? sale.text_tm : sale.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
-              <%= link_to more_sale_path(sale) do %>
+    <div class="novana_ulanekas">
+    <% @saf.each do |sale| %>
+      <div class="site-section">
+        <div class="block__73694 mb-2" id="services-section" style="max-height: 200px;">
+          <div class="container">
+            <div class="row d-flex no-gutters align-items-stretch">
+              <div class="col-6 col-md-3 block__73422" data-aos="fade-right" data-aos-delay="">
+                <div class="card" style="width: 10rem;">
+                  <% if sale.image.attached? %>
+                  <%= image_tag(sale.image) %>
+                  <% else %>
+                <%= image_tag(@no) %>
+                <% end %>
+              </div>
+              </div>
+              <div class="col-6 col-md-9 block__73422" data-aos="fade-left" data-aos-delay="">
+                <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+                <h2 class="mb-3 text-black"><%= sale.title_ru if params[:locale] == 'ru' %></h2>
+                <h2 class="mb-3 text-black"><%= sale.title_tm if params[:locale] == 'tm' %></h2>
+                <% if sale.text_ru != nil %>
+                <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+                <p><%= simple_format sale.text_ru.length <= 100 ? sale.text_ru : sale.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+                <p><%= simple_format sale.text_tm.length <= 100 ? sale.text_tm : sale.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+                <% end %>
+                <%= link_to more_sale_path(sale) do %>
                 <%= t('more')%>
-              <% end %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <hr>
+    <% end %>
     </div>
-    <hr>
-  <% end %>
-
 </div>

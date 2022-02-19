@@ -1,6 +1,22 @@
 
+
+<style>
+ .scale {
+  transition: 1s; /* Время эффекта */
+ }
+ .scale:hover {
+  transform: scale(5); /* Увеличиваем масштаб */
+ }
+</style>
+<center>
+    <h1><%= t('sale_show')%></h1>
+
+
+
+
+</center>
   <% if @sale != nil %>
-    <div class="container">
+    <div class="container" style="background-color: rgba(169,169,169, 0.2);">
     <h1>
     <%= @sale.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
     <%= @sale.title_ru if params[:locale] == 'ru' %>
@@ -53,24 +69,33 @@
     <%= @region.name if params[:locale] == 'ru' %>
     <%= @region.name_tm if params[:locale] == 'tm' %>
     <hr>
-    <% @sale.images.each do |image|%>
-      <%= image_tag(image)%>
+    <div class="row">
+      <% @sale.images.each do |image|%>
+        <div class="col-6 col-md-2">
+
+            <%= image_tag(image, class:'productsimages rounded open-popup')%>
+
+        </div>
+
+
     <% end %>
     </div>
     <% else %>
     <div class="parallax">
       <%= image_tag(@dealdone, style:'width: 100%; opacity:.2;') %>
       <center>
-      <div class="centered">
+      <div class="centered" style="margin-top: -500px">
 
         <%= t('sale.sales')%>
 
         <%= link_to root_path, class:'btn btn-light' do %>
           <%= t('sale.sales_back')%>
-
+        <% end %>
       </div>
       </center>
-      <% end %>
+      </div>
   <% end %>
+
   </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br>

@@ -19,6 +19,7 @@ class SalesController < ApplicationController
     @saf = @salesauto.where(sales: false)
   end
   def more
+    
     @keys = Key.all
     @keys.each do |key|
       if key.key != @activation

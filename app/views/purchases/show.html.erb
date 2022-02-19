@@ -1,3 +1,9 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="/css/slider.css">
+</head>
 <center>
     <h1>ПОКУПКА</h1>
     <h2>
@@ -11,26 +17,35 @@
 </center>
 <% %>
 
-<div class="container">
+<div class="novana_ulanekas_wrapper">
 
-  <% @purchase.each do |purchase| %>
+  <div class="novana_ulanekas">
+
+  <% @purchasefiltered.each do |purchase| %>
     <div class="site-section">
       <div class="block__73694 mb-2" id="services-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
-            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
-            <% if purchase.image.attached? %>
-              <%= image_tag(purchase.image, style:'width: 50%') %>
-            <% else %>
-              <%= image_tag(@no, style:'width: 50%') %>
-            <% end %>
+            <div class="col-6 col-md-3 block__73422" data-aos="fade-left" data-aos-delay="">
+              <div class="card" style="width: 10rem;">
+                <% if purchase.image.attached? %>
+                  <%= image_tag(purchase.image)%>
+                <% else %>
+                  <%= image_tag(@no) %>
+                <% end %>
+              </div>
 
-              <h2 class="mb-3 text-white"><%= purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
-              <h2 class="mb-3 text-white"><%= purchase.title_ru if params[:locale] == 'ru' %></h2>
-              <h2 class="mb-3 text-white"><%= purchase.title_tm if params[:locale] == 'tm' %></h2>
+              </div>
+              <div class="col-6 col-md-9 block__73422" data-aos="fade-right" data-aos-delay="">
+              <h2 class="mb-3 text-black"><%= purchase.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= purchase.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= purchase.title_tm if params[:locale] == 'tm' %></h2>
+              <% if purchase.text_ru != nil %>
               <p><%= simple_format purchase.text_ru.length <= 100 ? purchase.text_ru : purchase.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
               <p><%= simple_format purchase.text_ru.length <= 100 ? purchase.text_ru : purchase.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
               <p><%= simple_format purchase.text_tm.length <= 100 ? purchase.text_tm : purchase.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+
+              <% end %>
               <%= link_to more_purchase_path(purchase) do %>
                 <%= t('more')%>
 
@@ -42,5 +57,5 @@
     </div>
     <hr>
   <% end %>
-
+</div>
 </div>

@@ -15,6 +15,8 @@ class RentsController < ApplicationController
     @labelrent = Typesofrent.find(params[:id])
     @rents = Rent.where(public: true)
     @rents1 = @rents.where(typesofrent_id: params[:id])
+
+    @rents2 = @rents1.order "busy ASC"
     @nophoto = Nophoto.all
 
     @nophoto.each do |nophoto|
@@ -37,6 +39,9 @@ else
 end
   end
   def more
+    @labelrent = Typesofrent.find(params[:id])
+    @rents = Rent.where(public: true)
+    @rents1 = @rents.where(typesofrent_id: params[:id])
     @keys = Key.all
     @keys.each do |key|
       if key.key != @activation
@@ -73,6 +78,9 @@ end
     @models = Model.all
 
     @rent = Rent.find(params[:id])
+    if @rent.username_id != current_user.id
+      redirect_to personals_path
+    end
   end
   def update
   @rent = Rent.find(params[:id])
@@ -85,7 +93,7 @@ end
   private
 
   def rent_params
-    params.require(:rent).permit(:title_ru, :title_tm, :title_en, :text_ru, :text_tm, :text_en, :region_id, :year, :typesofrent_id, :phone, :price, :email, :public, :model_id, :brand_id, :search, :cashless, :image, :images, :username_id)
+    params.require(:rent).permit(:title_ru, :title_tm, :title_en, :text_ru, :text_tm, :text_en, :region_id, :year, :typesofrent_id, :phone, :price, :email, :public, :model_id, :brand_id, :search, :cashless, :image, :images, :username_id, :busy)
   end
 
 

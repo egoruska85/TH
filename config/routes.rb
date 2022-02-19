@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :news
-   
+  resources :contacts 
   resources :rents do
     member {get :more}
   end

@@ -13,36 +13,43 @@
 <h1></h1>
 <center>
 <%= link_to new_search_path do %>
-  Добавить аренду
+  <%= t("rent.add")%>
 <% end %>
 </center>
 
-<div class="container">
+<div class="novana_ulanekas_wrapper">
 
-  <% @searches1.each do |search| %>
+  <div class="novana_ulanekas">
+
+  <% @searches2.each do |search| %>
     <div class="site-section">
       <div class="block__73694 mb-2" id="services-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
-            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <div class="col-6 col-md-3 block__73422" data-aos="fade-left" data-aos-delay="">
+              <div class="card" style="width: 10rem;">
             <% if search.image.attached? %>
-              <%= image_tag(search.image, style:'width: 50%') %>
+              <%= image_tag(search.image) %>
             <% else %>
-              <%= image_tag(@no, style:'width: 50%') %>
+              <%= image_tag(@no) %>
             <% end %>
-
-              <h2 class="mb-3 text-white"><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
-              <h2 class="mb-3 text-white"><%= search.title_ru if params[:locale] == 'ru' %></h2>
-              <h2 class="mb-3 text-white"><%= search.title_tm if params[:locale] == 'tm' %></h2>
+            </div>
+            <%= check_box_tag 'admin', '1', search.busy, :disabled => true %><%= t('rent.busy') %>
+            </div>
+            <div class="col-6 col-md-9 block__73422" data-aos="fade-right" data-aos-delay="">
+              <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= search.title_ru if params[:locale] == 'ru' %></h2>
+              <h2 class="mb-3 text-black"><%= search.title_tm if params[:locale] == 'tm' %></h2>
               <% if search.text_ru != nil %>
               <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
-              <p><%= simple_format search.text_tm.length <= 100 ? search.text_tm : search.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+              <p><%= simple_format search.text_ru.length <= 100 ? search.text_tm : search.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
               <% elsif search.text_tm != nil %>
-              <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+              <p><%= simple_format search.text_tm.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
               <% end %>
               <%= link_to more_search_path(search) do %>
                 <%= t('more')%>
               <% end %>
+
             </div>
           </div>
         </div>
@@ -50,5 +57,5 @@
     </div>
     <hr>
   <% end %>
-
+</div>
 </div>

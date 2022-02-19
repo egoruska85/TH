@@ -1,15 +1,24 @@
+<center>
+  <h1><%= t('search_show')%></h1>
+  <h2>
 
+    <%= @labelrent.name if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+    <%= @labelrent.name if params[:locale] == 'ru' %>
+    <%= @labelrent.name_tm if params[:locale] == 'tm' %>
+  </h2>
+
+</center>
 
 
 <% if @search != nil %>
-  <div class="container">
+  <div class="container" style="background-color: rgba(169,169,169, 0.2);">
   <h1>
   <%= @search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
   <%= @search.title_ru if params[:locale] == 'ru' %>
   <%= @search.title_tm if params[:locale] == 'tm' %>
   <% if current_user %>
     <% if current_user.id == @search.username_id %>
-      <%= link_to edit_rent_path(@search) do %>
+      <%= link_to edit_search_path(@search) do %>
         <span class="icon-pencil"></span>
       <% end %>
     <% end %>
@@ -54,9 +63,17 @@
   <%= @region.name if params[:locale] == 'ru' %>
   <%= @region.name_tm if params[:locale] == 'tm' %>
   <hr>
-  <% @search.images.each do |image|%>
-    <%= image_tag(image)%>
+  <div class="row">
+    <% @search.images.each do |image|%>
+      <div class="col-6 col-md-2">
+
+          <%= image_tag(image, class:'productsimages rounded open-popup')%>
+
+      </div>
+
+
   <% end %>
+  </div>
   </div>
   <% elsif %>
   <div class="parallax">

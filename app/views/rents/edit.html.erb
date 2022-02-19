@@ -9,7 +9,12 @@
     <br><br><br><br>
 
       <%= form_for :rent, url: rent_path(@rent), method: :put do |f| %>
+
       <div class="container">
+        <div class="">
+          <%= f.label t('rent.busy') %>
+          <%= f.check_box :busy %>
+        </div>
         <center>
           <%= f.label t('rent.title'), class:'form-label' %>
           <% if params[:locale] == 'ru' %>

@@ -1,44 +1,98 @@
-<div class="site-section">
-  <div class="block__73694 mb-2" id="services-section">
-    <div class="container">
-      <div class="row d-flex no-gutters align-items-stretch">
-        <div class="col-12 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
-          <%= image_tag(@service.image, style:'width: 100%') %>
-        </div>
-        <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-          <h2 class="mb-3 text-white">
-            <%= @service.name_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-            <%= @service.name_ru if params[:locale] == 'ru' %>
-            <%= @service.name_tm if params[:locale] == 'tm' %>
-          </h2>
-          <p>
-            <%= simple_format @service.text_ru, style:'font-size: 13px' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
-            <%= simple_format @service.text_ru, style:'font-size: 13px' if params[:locale] == 'ru' %>
-            <%= simple_format @service.text_tm, style:'font-size: 13px' if params[:locale] == 'tm' %>
-          </p>
+<div class="shadow-lg p-3 mb-5 bg-white rounded container border border-info">
+    <div class="site-section">
+      <div class="block__73694 mb-2" id="services-section">
+        <div class="container">
+          <div class="row d-flex no-gutters align-items-stretch">
+            <div class="col-12 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+              <%= image_tag(@service.image, style:'width: 100%') %>
+            </div>
+            <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
+              <h2 class="mb-3 text-black">
+                <%= @service.name_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                <%= @service.name_ru if params[:locale] == 'ru' %>
+                <%= @service.name_tm if params[:locale] == 'tm' %>
+              </h2>
+              <p>
+                <%= simple_format @service.text_ru, style:'font-size: 13px' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %>
+                <%= simple_format @service.text_ru, style:'font-size: 13px' if params[:locale] == 'ru' %>
+                <%= simple_format @service.text_tm, style:'font-size: 13px' if params[:locale] == 'tm' %>
+              </p>
 
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
-<div class="container">
 
-    <h4><%= t('no_comments') if @service.comments.empty? %></h4>
-    <% @service.comments.each do |comment| %>
 
-<p><strong><%= t('author')%></strong> <%= comment.author %> ; <%= t('time')%> <%= comment.created_at %></p>
-<p><%= comment.body %></p>
-<hr>
-<% end %>
-<%= form_for([@service, @service.comments.build]) do |f| %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <% if params[:id] == '1' %>
+      <% flash.each do |type, msg| %>
+        <div class="class="alert alert-primary" role="alert"">
+          <h4><%= msg %></h4>
+        </div>
+      <% end %>
+      <div class="form-wrapper">
+      <%= form_for @contact do |f| %>
+      <div class="contact-form">
+        <% if @contact.errors.any? %>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <div class="alert alert-danger">
+              <%= msg %>
+            </div>
+          <% end %>
+        <% end %>
+        <h2 class="contact-form__title"><%= t('services.write') %></h2>
+        <div class="contact-form__input-wrapper">
 
-<p>
-  <%= f.label t('body') %>
-  <%= f.text_area :body, class:'form-control', style:"width: 800px"%>
-</p>
+          <%= f.text_field :name, class:'contact-form__input contact-form__input_name', placeholder: t('contact.name')%>
+        </div>
+      <div class="contact-form__input-wrapper">
+        <%= f.email_field :email, class:'contact-form__input contact-form__input_email', placeholder:'E-mail' %>
+      </div>
+      <div class="contact-form__input-wrapper">
+        <%= f.text_field :phone, class:'contact-form__input contact-form__input_tel', placeholder: t('sales.phone')  %>
+      </div>
+      <div class="contact-form__input-wrapper">
+      <%= f.text_area :message, class:'form-control', rows:'8' %>
+      </div>
+        <div class="contact-form__input-wrapper">
+          <%= f.file_field :file, class:'form-control', type:'file', id:'formFileMultiple' %>
+        </div>
+      <center>
+      <%= f.submit t('contact.send'), class:'btn btn-success'%>
+      </center>
+      <% end %>
+      </div>
 
-<p><%= f.submit t('write'), class:'btn btn-success' %></p>
-<% end %>
+      </div>
+      <% end %>
+    </div>
+    <div class="">
 
+    </div>
+    <div class="col-12 col-md-6">
+<div class="shadow-lg p-3 mb-5 bg-white rounded border border-info">
+        <h4><%= t('no_comments') if @service.comments.empty? %></h4>
+        <% @service.comments.each do |comment| %>
+
+    <p><strong><%= t('author')%></strong> <%= comment.author %> ; <%= t('time')%> <%= comment.created_at %></p>
+    <p><%= comment.body %></p>
+    <hr>
+    <% end %>
+    <%= form_for([@service, @service.comments.build]) do |f| %>
+
+    <p>
+      <%= f.label t('body') %>
+      <%= f.text_area :body, class:'form-control', style:"width: absolute;"%>
+    </p>
+
+    <p><%= f.submit t('write'), class:'btn btn-success' %></p>
+    <% end %>
+    </div>
+</div>
+  </div>
 </div>

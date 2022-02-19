@@ -12,21 +12,26 @@
       <% t('add')%>
     <% end %>
 </center>
-<center>
-    <div class="container">
+
+  <div class="novana_ulanekas_wrapper">
+
+    <div class="novana_ulanekas">
 
       <% @rents.each do |rent| %>
-        <div class="site-section">
-          <div class="block__73694 mb-2" id="services-section">
-            <div class="container">
-              <div class="row d-flex no-gutters align-items-stretch">
-                <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+      <div class="site-section">
+        <div class="block__73694 mb-2" id="services-section">
+          <div class="container">
+            <div class="row d-flex no-gutters align-items-stretch">
+              <div class="col-6 col-md-3 block__73422" data-aos="fade-left" data-aos-delay="">
+                <div class="card" style="width: 10rem;">
                 <% if rent.image.attached? %>
-                  <%= image_tag(rent.image, style:'width: 50%') %>
+                  <%= image_tag(rent.image) %>
                 <% else %>
-                  <%= image_tag(@no, style:'width: 50%') %>
+                  <%= image_tag(@no) %>
                 <% end %>
-
+                </div>
+                </div>
+                <div class="col-3 col-md-9 block__73422" data-aos="fade-right" data-aos-delay="">
                   <h2 class="mb-3 "><%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
                   <h2 class="mb-3 "><%= rent.title_ru if params[:locale] == 'ru' %></h2>
                   <h2 class="mb-3 "><%= rent.title_tm if params[:locale] == 'tm' %></h2>
@@ -42,51 +47,61 @@
                   <% end %><br>
                   <%= link_to more_rent_path(rent) do %>
                     <%= t('more')%>
-                  <% end %>
-
+                  <% end %>|
+                  <%= link_to t('delete'), rent, :method => :delete, :class => "btn btn-danger", data: {confirm: "Вы точно хотите удалить?"} %>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
         <hr>
       <% end %>
+</div>
+</div>
 
-    </div>
-    </center>
   <br><br>
     <center>
       <h4><%= t('search_show')%></h4>
       <%= link_to new_search_path, class:'btn btn-light' do %>
         Добавить
       <% end %>
-    <center>
-      <div class="container">
+        </center>
+        <div class="novana_ulanekas_wrapper">
+
+          <div class="novana_ulanekas">
 
         <% @searches.each do |search| %>
-          <div class="site-section">
-            <div class="block__73694 mb-2" id="services-section">
-              <div class="container">
-                <div class="row d-flex no-gutters align-items-stretch">
-                  <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+        <div class="site-section">
+          <div class="block__73694 mb-2" id="services-section">
+            <div class="container">
+              <div class="row d-flex no-gutters align-items-stretch">
+                <div class="col-6 col-md-3 block__73422" data-aos="fade-left" data-aos-delay="">
+                  <div class="card" style="width: 10rem;">
                   <% if search.image.attached? %>
-                    <%= image_tag(search.image, style:'width: 50%') %>
+                    <%= image_tag(search.image) %>
                   <% else %>
-                    <%= image_tag(@no, style:'width: 50%') %>
+                    <%= image_tag(@no) %>
                   <% end %>
-
+                </div>
+                </div>
+                <div class="col-3 col-md-9 block__73422" data-aos="fade-right" data-aos-delay="">
                     <h2 class="mb-3 "><%= search.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
                     <h2 class="mb-3 "><%= search.title_ru if params[:locale] == 'ru' %></h2>
                     <h2 class="mb-3 "><%= search.title_tm if params[:locale] == 'tm' %></h2>
                     <% if search.text_ru != nil%>
-                    <p><%= simple_format search.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
-                    <p><%= simple_format search.text_ru.length <= 100 ? rent.text_ru : rent.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
+                    <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru'%></p>
+                    <p><%= simple_format search.text_ru.length <= 100 ? search.text_ru : search.text_ru[0..100] + '...' if params[:locale] == 'ru' %></p>
                     <% elsif search.text_tm %>
-                    <p><%= simple_format search.text_tm.length <= 100 ? rent.text_tm : rent.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
+                    <p><%= simple_format search.text_tm.length <= 100 ? search.text_tm : search.text_tm[0..100] + '...' if params[:locale] == 'tm' %></p>
                     <% end %>
+                    <% if search.public == true %>
+                      <%= t('public')%>
+                    <% end %><br>
                     <%= link_to more_search_path(search) do %>
                       <%= t('more')%>
                     <% end %>
+                    <%= link_to t('delete'), search, :method => :delete, :class => "btn btn-danger", data: {confirm: "Вы точно хотите удалить?"} %>
                   </div>
                 </div>
               </div>
@@ -94,6 +109,6 @@
           </div>
           <hr>
         <% end %>
-
-      </div>
+</div>
+</div>
 <div id="box"></div>

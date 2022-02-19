@@ -16,25 +16,32 @@
 <h1></h1>
 <center>
 <%= link_to new_rent_path do %>
-  Добавить аренду
+  <%= t('rent.add')%>
 <% end %>
 </center>
 
 
-<div class="container">
+<div class="novana_ulanekas_wrapper">
 
-  <% @rents1.each do |rent| %>
+  <div class="novana_ulanekas">
+
+  <% @rents2.each do |rent| %>
     <div class="site-section">
       <div class="block__73694 mb-2" id="services-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
-            <div class="col-6 col-lg-6 block__73422" data-aos="fade-right" data-aos-delay="">
+            <div class="col-6 col-md-3 block__73422" data-aos="fade-left" data-aos-delay="">
+            <div class="card" style="width: 10rem;">
             <% if rent.image.attached? %>
-              <%= image_tag(rent.image, style:'width: 50%') %>
+              <%= image_tag(rent.image) %>
             <% else %>
-              <%= image_tag(@no, style:'width: 50%') %>
+              <%= image_tag(@no) %>
             <% end %>
 
+          </div>
+          <%= check_box_tag 'admin', '1', rent.busy, :disabled => true %><%= t('rent.busy') %>
+          </div>
+          <div class="col-6 col-md-9 block__73422" data-aos="fade-right" data-aos-delay="">
               <h2 class="mb-3 text-black"><%= rent.title_ru if params[:locale] != true and params[:locale] != 'tm' and params[:locale] != 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= rent.title_ru if params[:locale] == 'ru' %></h2>
               <h2 class="mb-3 text-black"><%= rent.title_tm if params[:locale] == 'tm' %></h2>
@@ -47,12 +54,12 @@
               <%= link_to more_rent_path(rent) do %>
                 <%= t('more')%>
               <% end %>
-            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
     <hr>
   <% end %>
-
+</div>
 </div>

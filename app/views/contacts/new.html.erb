@@ -1,0 +1,36 @@
+<% flash.each do |type, msg| %>
+  <div class="class="alert alert-primary" role="alert"">
+    <h4><%= msg %></h4>
+  </div>
+<% end %>
+<div class="form-wrapper">
+<%= form_for @contact do |f| %>
+<div class="contact-form">
+  <% if @contact.errors.any? %>
+    <% @contact.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger">
+        <%= msg %>
+      </div>
+    <% end %>
+  <% end %>
+  <h2 class="contact-form__title"><%= t('contact.write') %></h2>
+  <div class="contact-form__input-wrapper">
+
+    <%= f.text_field :name, class:'contact-form__input contact-form__input_name', placeholder: t('contact.name')%>
+  </div>
+<div class="contact-form__input-wrapper">
+  <%= f.email_field :email, class:'contact-form__input contact-form__input_email', placeholder:'E-mail' %>
+</div>
+<div class="contact-form__input-wrapper">
+  <%= f.text_field :phone, class:'contact-form__input contact-form__input_tel', placeholder: t('sales.phone')  %>
+</div>
+<div class="contact-form__input-wrapper">
+<%= f.text_area :message, class:'form-control', rows:'8' %>
+</div>
+  <div class="contact-form__input-wrapper">
+    <%= f.file_field :file, class:'form-control', type:'file', id:'formFileMultiple' %>
+  </div>
+<center>
+<%= f.submit t('contact.send'), class:'btn btn-success'%>
+</center>
+<% end %>

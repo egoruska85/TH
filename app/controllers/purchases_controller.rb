@@ -14,10 +14,12 @@ class PurchasesController < ApplicationController
     @nophoto.each do |nophoto|
       @no = nophoto.image
     end
-  @type = Type.find(params[:id])  
+  @type = Type.find(params[:id])
   @purchase = Purchase.where(type_id: params[:id])
+  @purchasefiltered = @purchase.where(bought: false)
   end
   def more
+
     @keys = Key.all
     @keys.each do |key|
       if key.key != @activation

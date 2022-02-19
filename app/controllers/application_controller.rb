@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  add_flash_types :info, :error, :warning
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :params_variable
   before_action :set_locale
@@ -50,6 +51,13 @@ def params_variable
   @time = Time.now
   @service_link = Service.where(name_ru: 'СМЕТНЫЙ АУТСОРСИНГ')
   @banners = Banner.all
+  @contact = Contact.new
+  @contactdetails = Contactdetail.all
+  @news = New.all
+  @favicon = Favicon.all
+  @favicon.each do |f|
+    @f = f.image
+  end
 end
 protected
 def configure_permitted_parameters
