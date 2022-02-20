@@ -35,7 +35,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('sales.brand') %>
           <%= f.select(:brand_id, [], {}, { :class => 'form-control' }) do %>
             <%= @brands.each do |c| %>
@@ -45,7 +45,7 @@
 
 
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('rent.typeteh') %>
           <%= f.select(:typesofrent_id, [], {}, { :class => 'form-control' }) do %>
             <%= @typesofrents.each do |c| %>
@@ -54,7 +54,7 @@
             <% end %>
           <% end %>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('sales.region') %>
           <%= f.select(:region_id, [], {}, { :class => 'form-control' }) do %>
             <%= @regions.each do |c| %>
@@ -63,7 +63,7 @@
             <% end %>
           <% end %>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('sales.brand') %>
           <%= f.select(:model_id, [], {}, { :class => 'form-control' }) do %>
             <%= @models.each do |c| %>
@@ -71,11 +71,11 @@
             <% end %>
           <% end %>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('sales.year') %>
           <%= f.text_field :year, :class => 'form-control' %>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('sales.price') %>
           <%= f.text_field :price, :class => 'form-control' %>
           <%= f.label t('sales.cashless') %>
@@ -90,15 +90,15 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('sales.phone') %>
           <%= f.text_field :phone, :class => 'form-control' %>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label 'Email' %>
           <%= f.text_field :email, class:'form-control', placeholder: t('no_write'), value:"#{current_user.email}" %>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <%= f.label t('name_user') %>
           <%= f.text_field :name, :class => 'form-control', value:"#{current_user.username}" %>
         </div>
