@@ -22,12 +22,13 @@
     <%= @sale.title_ru if params[:locale] == 'ru' %>
     <%= @sale.title_tm if params[:locale] == 'tm' %>
     </h1>
-
+<div class="card" style="width: 10rem;">
     <% if @sale.image.attached? %>
       <%= image_tag(@sale.image)%>
     <% else %>
       <%= image_tag(@no) %>
     <% end %>
+    </div>
     <hr>
     <%= t('sales.brand')%><div><%= @brand.name %></div>
     <hr>
