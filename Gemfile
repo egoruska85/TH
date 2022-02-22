@@ -6,7 +6,7 @@ gem 'capistrano3-puma' , group: :development
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4', :group => [:development, :test]
+gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 
 gem 'puma', '~> 4.3.9' #'~> 5.0'
