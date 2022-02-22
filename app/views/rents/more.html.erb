@@ -35,13 +35,11 @@
     <% end %>
   <% end %>
   </h1>
-  <div class="card" style="width: 10rem;">
   <% if @rent.image.attached? %>
     <%= image_tag(@rent.image)%>
   <% else %>
     <%= image_tag(@no) %>
   <% end %>
-  </div>
   <hr>
   <%= t('sales.brand')%><div><%= @brand.name %></div>
   <hr>

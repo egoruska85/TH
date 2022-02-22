@@ -24,13 +24,12 @@
     <% end %>
   <% end %>
   </h1>
-<div class="card" style="width: 10rem;">
+
   <% if @search.image.attached? %>
     <%= image_tag(@search.image)%>
   <% else %>
     <%= image_tag(@no) %>
   <% end %>
-  </div>
   <hr>
   <%= t('sales.brand')%><div><%= @brand.name %></div>
   <hr>
