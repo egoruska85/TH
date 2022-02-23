@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   end
   def create
     @contact = Contact.new(params[:contact])
-    @contact.sender = 'egoruska85@mail.ru'
+    @contact.sender = 'tijenasb@mail.ru'
     @contact.request = request
 
     if @contact.deliver
@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     else
       flash.now[error] = nil
 
-      
+
       redirect_to root_path + "#footer2", info: "#{t('not_send')}"
     end
   end

@@ -25,8 +25,7 @@ production:
   host: localhost
   adapter: postgresql
   encoding: utf8
-  database: th
+  database: th_
   pool: 5
   username: postgres
   password: root
-  

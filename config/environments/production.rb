@@ -16,7 +16,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  
+
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
@@ -119,4 +119,15 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  config.action_mailer.default_url_options = {host: 'https://localhost:3000'}
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:              'smtp.mail.ru',
+  port:                 587,
+  domain:               'mail.ru',
+  user_name:            'tijenasb@mail.ru',
+  password:             'A(2rv.YrBj@24Q7',
+  authentication:       'plain',
+  enable_starttls_auto: true  }
 end
